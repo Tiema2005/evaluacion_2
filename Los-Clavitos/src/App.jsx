@@ -1,14 +1,8 @@
-import Inicio from "./pages/Inicio";
-import './App.css';
-
-const mascotas = [
-  { id: 1, nombre: "Firulais", especie: "Perro" },
-  { id: 2, nombre: "Michi", especie: "Gato" },
-  { id: 3, nombre: "Coco", especie: "Loro" },
-];
+import Login from "./pages/Login";
+import "./App.css";
 
 function App() {
-  return <Inicio mascotas={mascotas} />;
+  return <Login />;
 }
 
 export default App;

@@ -1,3 +1,5 @@
+import { Button } from "react-bootstrap";
+
 function Boton(props) {
   const variante = props.variante || "primary";
   return (
