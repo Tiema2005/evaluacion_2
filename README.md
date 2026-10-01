@@ -18,7 +18,11 @@ src/
 │   ├── molecules/
 │   ├── organisms/
 │   └── templates/
+└── context/
+└── data/
 └── pages/
+└── service/
+└── utils/
 
 ## Tecnologías
 - React + Vite
