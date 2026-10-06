@@ -12,11 +12,11 @@ function EtiquetaStock({ stock = 0, stockMinimo = 5 }) {
     variante = "success";
 }
 
-  return (
-    <Badge bg={variante}>
-      {texto} ({stock})
-    </Badge>
-  );
+    return (
+        <Badge bg={variante}>
+        {texto} ({stock})
+        </Badge>
+    );
 }
 
 export default EtiquetaStock;
