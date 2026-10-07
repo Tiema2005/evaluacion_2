@@ -12,17 +12,49 @@ La aplicación permite iniciar sesión, explorar el catálogo, agregar productos
 al carrito y, para el rol administrador, gestionar el catálogo.
 
 ## Estructura del proyecto
-src/
-├── components/
-│   ├── atoms/
-│   ├── molecules/
-│   ├── organisms/
-│   └── templates/
-└── context/
-└── data/
-└── pages/
-└── service/
-└── utils/
+├── public
+│   ├── favicon.svg
+│   └── icons.svg
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── hero.png
+│   │   ├── react.svg
+│   │   └── vite.svg
+│   ├── components
+│   │   ├── atoms
+│   │   │   ├── Boton.jsx
+│   │   │   ├── CampoInput.jsx
+│   │   │   ├── ContadorCantidad.jsx
+│   │   │   ├── EtiquetaStock.jsx
+│   │   │   ├── Precio.jsx
+│   │   │   └── Selector.jsx
+│   │   ├── molecules
+│   │   │   ├── CampoFormulario.jsx
+│   │   │   ├── FilaInventario.jsx
+│   │   │   ├── FiltroCategoria.jsx
+│   │   │   ├── ItemCarrito.jsx
+│   │   │   └── TarjetaProducto.jsx
+│   │   ├── organisms
+│   │   │   ├── CatalogoProductos.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   └── Navbar.jsx
+│   │   └── templates
+│   │       └── PlantillaPublica.jsx
+│   ├── context
+│   │   └── ProductosContext.jsx
+│   ├── data
+│   │   └── productos.json
+│   ├── index.css
+│   ├── main.jsx
+│   ├── pages
+│   │   ├── Catalogo.jsx
+│   │   └── Inicio.jsx
+│   ├── services
+│   │   └── productoService.js
+│   └── utils
+│       └── stockUtils.js
 
 ## Tecnologías
 - React + Vite
