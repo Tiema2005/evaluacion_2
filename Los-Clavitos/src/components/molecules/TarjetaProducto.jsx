@@ -44,3 +44,5 @@ function TarjetaProducto(props) {
 }
 
 export default TarjetaProducto;
+
+//El commit anterior fue: "Se agregaron props a los componentes Navbar, Footer y TarjetaProducto para que puedan recibir datos dinámicos desde sus componentes padres. Esto permite personalizar el contenido de estos componentes según las necesidades de la aplicación."
