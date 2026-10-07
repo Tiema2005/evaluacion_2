@@ -1,33 +1,27 @@
-import { Button } from "react-bootstrap";
+import Boton from "./Boton";
 
-function ContadorCantidad({
-    cantidad = 1,
-    onAumentar,
-    onDisminuir,
-    minimo = 1,
-}) {
-return (
-    <div className="d-flex align-items-center gap-2">
-        <Button
-            variant="outline-secondary"
-            size="sm"
-            onClick={onDisminuir}
-            disabled={cantidad <= minimo}
-        >
-        -
-        </Button>
+function ContadorCantidad(props) {
+    const cantidad = props.cantidad ?? 1;
+    const minimo = props.minimo ?? 1;
 
-        <span>{cantidad}</span>
+    return (
+        <div className="d-flex align-items-center gap-2">
+            <Boton
+                texto="-"
+                variante="outline-secondary"
+                onClick={props.onDisminuir}
+                deshabilitado={cantidad <= minimo}
+            />
 
-        <Button
-            variant="outline-secondary"
-            size="sm"
-            onClick={onAumentar}
-        >
-        +
-        </Button>
-    </div>
-);
+            <span>{cantidad}</span>
+
+            <Boton
+                texto="+"
+                variante="outline-secondary"
+                onClick={props.onAumentar}
+            />
+        </div>
+    );
 }
 
 export default ContadorCantidad;

@@ -1,37 +1,29 @@
 import { Form } from "react-bootstrap";
 
-function CampoInput({
-    id,
-    label,
-    type = "text",
-    placeholder,
-    value,
-    onChange,
-    errorTexto,
-    name,
-    disabled = false,
-}) {
-return (
-    <Form.Group className="mb-3" controlId={id}>
-        <Form.Label>{label}</Form.Label>
+function CampoInput(props) {
+    const tipo = props.tipo || "text";
 
-        <Form.Control
-            type={type}
-            name={name}
-            placeholder={placeholder}
-            value={value}
-            onChange={onChange}
-            disabled={disabled}
-            isInvalid={Boolean(errorTexto)}
-        />
+    return (
+        <Form.Group className="mb-3" controlId={props.id}>
+            <Form.Label>{props.label}</Form.Label>
 
-        {errorTexto && (
-            <Form.Control.Feedback type="invalid">
-                {errorTexto}
-            </Form.Control.Feedback>
-        )}
-    </Form.Group>
-);
+            <Form.Control
+                type={tipo}
+                name={props.name}
+                placeholder={props.placeholder}
+                value={props.value}
+                onChange={props.onChange}
+                disabled={props.deshabilitado}
+                isInvalid={Boolean(props.errorTexto)}
+            />
+
+            {props.errorTexto && (
+                <Form.Control.Feedback type="invalid">
+                    {props.errorTexto}
+                </Form.Control.Feedback>
+            )}
+        </Form.Group>
+    );
 }
 
 export default CampoInput;

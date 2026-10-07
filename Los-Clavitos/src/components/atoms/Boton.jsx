@@ -1,15 +1,16 @@
-import { Button } from "react-bootstrap";
+function Boton(props) {
+    const variante = props.variante || "primary";
+    const tipo = props.tipo || "button";
 
-function Boton({ variante = "primary", texto, onClick, disabled = false, type = "button" }) {
     return (
-        <Button
-            variant={variante}
-            onClick={onClick}
-            disabled={disabled}
-            type={type}
+        <button
+            className={`btn btn-${variante}`}
+            type={tipo}
+            onClick={props.onClick}
+            disabled={props.deshabilitado}
         >
-            {texto}
-        </Button>
+            {props.texto}
+        </button>
     );
 }
 

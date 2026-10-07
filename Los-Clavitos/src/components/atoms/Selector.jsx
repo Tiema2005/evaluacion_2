@@ -1,28 +1,33 @@
 import { Form } from "react-bootstrap";
 
-function Selector({
-    id,
-    label,
-    value,
-    onChange,
-    opciones = [],
-    placeholder = "Seleccione una opción",
-}) {
-return (
-    <Form.Group className="mb-3" controlId={id}>
-        <Form.Label>{label}</Form.Label>
+function Selector(props) {
+    const placeholder = props.placeholder || "Seleccione una opción";
+    const opciones = props.opciones || [];
 
-        <Form.Select value={value} onChange={onChange}>
-            <option value="">{placeholder}</option>
+    return (
+        <Form.Group className="mb-3" controlId={props.id}>
+            <Form.Label>{props.label}</Form.Label>
 
-            {opciones.map((opcion) => (
-                <option key={opcion} value={opcion}>
-                    {opcion}
-            </option>
-            ))}
-        </Form.Select>
-    </Form.Group>
-);
+            <Form.Select
+                value={props.value}
+                onChange={props.onChange}
+                disabled={props.deshabilitado}
+            >
+                <option value="">
+                    {placeholder}
+                </option>
+
+                {opciones.map((opcion) => (
+                    <option
+                        key={opcion}
+                        value={opcion}
+                    >
+                        {opcion}
+                    </option>
+                ))}
+            </Form.Select>
+        </Form.Group>
+    );
 }
 
 export default Selector;
