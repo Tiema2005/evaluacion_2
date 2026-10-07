@@ -18,5 +18,3 @@ function Inicio() {
 }
 
 export default Inicio;
-
-// Este cambio es solo para aclarar que el COMMIT anterior fue de Felipe Escobar

@@ -1,12 +1,12 @@
 import { Container, Nav, Navbar as NavbarBootstrap } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar(props) {
     return (
         <NavbarBootstrap bg="dark" data-bs-theme="dark" expand="lg">
             <Container>
                 <NavbarBootstrap.Brand as={Link} to="/">
-                    Ferretería Los Maestros
+                    {props.nombre}
                 </NavbarBootstrap.Brand>
 
                 <NavbarBootstrap.Toggle aria-controls="navbar-principal" />
