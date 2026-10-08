@@ -1,7 +1,14 @@
-import { Container, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import Boton from "../components/atoms/Boton";
 
 function Inicio() {
+    const navigate = useNavigate();
+
+    function irCatalogo() {
+        navigate("/catalogo");
+    }
+
     return (
         <Container className="py-5 text-center">
             <h1>Ferretería Los Maestros</h1>
@@ -10,9 +17,11 @@ function Inicio() {
                 Encuentra materiales, herramientas y productos para tus proyectos.
             </p>
 
-            <Button as={Link} to="/catalogo" variant="primary">
-                Ver catálogo
-            </Button>
+            <Boton
+                texto="Ver catálogo"
+                variante="primary"
+                onClick={irCatalogo}
+            />
         </Container>
     );
 }

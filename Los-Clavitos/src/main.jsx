@@ -6,9 +6,9 @@ import './index.css';
 import { ProductosProvider } from './context/ProductosContext.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <ProductosProvider>
-      <App />
-    </ProductosProvider>
-  </StrictMode>,
+    <StrictMode>
+        <ProductosProvider>
+            <App />
+        </ProductosProvider>
+    </StrictMode>,
 );

@@ -29,15 +29,15 @@ export function ProductosProvider({ children }) {
     setProductos(productoService.listarProductos())
   }
 
-  function actualizar(id, cambios) {
-    productoService.actualizarProducto(id, cambios)
-    setProductos(productoService.listarProductos())
-  }
+  function actualizar(codigo, cambios) {
+    productoService.actualizarProducto(codigo, cambios);
+    setProductos(productoService.listarProductos());
+}
 
-  function eliminar(id) {
-    productoService.eliminarProducto(id)
-    setProductos(productoService.listarProductos())
-  }
+  function eliminar(codigo) {
+    productoService.eliminarProducto(codigo);
+    setProductos(productoService.listarProductos());
+}
 
   // Sirve para refrescar la lista cuando otro service cambió los datos por su cuenta
   // (por ejemplo, al comprar baja el stock).
