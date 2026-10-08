@@ -72,7 +72,7 @@ Carpeta de Drive con documentos del semestre (ERS y otros):
 
 Esta sección registra los avances diarios del proyecto, identificando las tareas realizadas por cada integrante, los problemas encontrados y las soluciones aplicadas. Su objetivo es mantener un historial del trabajo del equipo y complementar los commits realizados en GitHub en caso de errores.
 
-### 08/10/2026 — Felipe Escobar
+### 08/10/26 — Felipe Escobar
 
 **Trabajo realizado:**
 - Integración del catálogo de productos utilizando los datos provenientes del Excel.
@@ -91,4 +91,14 @@ Esta sección registra los avances diarios del proyecto, identificando las tarea
 - Se verificó la carga de productos y se completó la conexión entre los componentes.
 - Se simplificaron los estilos generales para permitir que Bootstrap controle correctamente la distribución responsive.
 
-**Estado:** Implementación principal de Semana 8 completada y comprobada visualmente.
+### 08/10/26 - Emanuel Toledo
+
+**Trabajo Realizado:**
+- Implementación de la molécula CampoFormulario.jsx, reutilizando los átomos CampoInput y Selector.
+- Creación de FiltroCategoria.jsx para agregar un selector de categorías en la parte superior del catálogo.
+- Integración del filtro en Catalogo.jsx utilizando useState para gestionar la categoría seleccionada.
+- Ajustamos la visualización del catálogo a un máximo de 9 productos, generando que al seleccionar un catálogo, independientemente de que tenga >= 9 solo se mostraran 9 productos.
+- Comprobamos que la compilación del proyecto funcionara correctamente usando npm run build desde la terminal de AWS.
+
+**Soluciones aplicadas:**
+- Se comprobó que el filtro funciona correctamente y que el catálogo mantiene el límite de 9 productos visibles.
