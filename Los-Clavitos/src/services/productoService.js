@@ -1,12 +1,9 @@
-// productoService: aquí vive el CRUD (Crear, Leer, Actualizar, Eliminar) de los productos.
-// Son funciones de JavaScript puro: no usan React.
 
 import datosExcel from "../data/productos.json";
 
 const CLAVE = "productos";
 
-// Esta función transforma los datos del Excel a una estructura más fácil de usar.
-// slice(2) elimina las dos primeras filas porque corresponden al título y encabezados.
+// Transforma los datos del Excel a una estructura más fácil de utilizar.
 function obtenerProductosIniciales() {
     return datosExcel["Catálogo de Productos"].slice(2).map((producto) => ({
         codigo: producto["FERRETERÍA LOS MAESTROS"],
@@ -22,20 +19,13 @@ function obtenerProductosIniciales() {
     }));
 }
 
-// Devuelve la lista actual de productos.
+// Obtiene los productos desde localStorage.
 function leer() {
     const guardado = localStorage.getItem(CLAVE);
 
-    // Si todavía no existen productos en localStorage,
-// se cargan los productos provenientes del Excel.
     if (guardado === null) {
         const productosIniciales = obtenerProductosIniciales();
-
-        localStorage.setItem(
-            CLAVE,
-            JSON.stringify(productosIniciales)
-        );
-
+        guardar(productosIniciales);
         return productosIniciales;
     }
 
@@ -63,6 +53,14 @@ export function obtenerProducto(codigo) {
 export function crearProducto(datos) {
     const lista = leer();
 
+    const existe = lista.some(
+        (producto) => producto.codigo === datos.codigo
+    );
+
+    if (existe) {
+        throw new Error("Ya existe un producto con ese código");
+    }
+
     const nuevo = { ...datos };
 
     guardar([...lista, nuevo]);
@@ -70,26 +68,50 @@ export function crearProducto(datos) {
     return nuevo;
 }
 
-// UPDATE: modifica el producto que tenga el código indicado.
+// UPDATE: modifica un producto existente.
 export function actualizarProducto(codigo, cambios) {
-    const lista = leer().map((producto) =>
+    const lista = leer();
+
+    const existe = lista.some(
+        (producto) => producto.codigo === codigo
+    );
+
+    if (!existe) {
+        return null;
+    }
+
+    const { codigo: codigoIgnorado, ...datosActualizados } = cambios;
+
+    const productosActualizados = lista.map((producto) =>
         producto.codigo === codigo
-            ? { ...producto, ...cambios }
+            ? { ...producto, ...datosActualizados }
             : producto
     );
 
-    guardar(lista);
+    guardar(productosActualizados);
 
-    return lista.find(
+    return productosActualizados.find(
         (producto) => producto.codigo === codigo
-    ) ?? null;
+    );
 }
 
-// DELETE: elimina el producto que tenga el código indicado.
+// DELETE: elimina un producto existente.
 export function eliminarProducto(codigo) {
-    const lista = leer().filter(
+    const lista = leer();
+
+    const existe = lista.some(
+        (producto) => producto.codigo === codigo
+    );
+
+    if (!existe) {
+        return false;
+    }
+
+    const productosActualizados = lista.filter(
         (producto) => producto.codigo !== codigo
     );
 
-    guardar(lista);
+    guardar(productosActualizados);
+
+    return true;
 }
