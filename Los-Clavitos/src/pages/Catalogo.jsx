@@ -1,24 +1,19 @@
-import { useState } from "react";
 import { Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { useProductos } from "../context/ProductosContext";
 import CatalogoProductos from "../components/organisms/CatalogoProductos";
-import FiltroCategoria from "../components/molecules/FiltroCategoria";
+import { useTituloPagina } from "../hooks/useTituloPagina";
 
 function Catalogo() {
+    const navigate = useNavigate();
     const { productos } = useProductos();
 
-    const [categoria, setCategoria] = useState("");
+    useTituloPagina("Catálogo de productos");
 
-    const categorias = [...new Set(productos.map((producto) => producto.categoria))];
+    const productosMostrar = productos.slice(0, 12);
 
-    const productosFiltrados = productos.filter((producto) => {
-        return categoria === "" || producto.categoria === categoria;
-    });
-
-    const productosMostrar = productosFiltrados.slice(0, 9);
-
-    function cambiarCategoria(evento) {
-        setCategoria(evento.target.value);
+    function verProducto(codigo) {
+        navigate(`/producto/${codigo}`);
     }
 
     return (
@@ -26,16 +21,13 @@ function Catalogo() {
             <h1>Catálogo de productos</h1>
 
             <p>
-                Revisa los productos disponibles en Ferretería Los Maestros.
+                Explora los productos disponibles en nuestra ferretería.
             </p>
 
-            <FiltroCategoria
-                categorias={categorias}
-                categoria={categoria}
-                onCambiarCategoria={cambiarCategoria}
+            <CatalogoProductos
+                productos={productosMostrar}
+                onVerProducto={verProducto}
             />
-
-            <CatalogoProductos productos={productosMostrar} />
         </Container>
     );
 }

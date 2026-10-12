@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Boton from "../components/atoms/Boton";
+import { useTituloPagina } from "../hooks/useTituloPagina";
 
 function Inicio() {
     const navigate = useNavigate();
@@ -8,6 +9,8 @@ function Inicio() {
     function irCatalogo() {
         navigate("/catalogo");
     }
+
+    useTituloPagina("Inicio");
 
     return (
         <Container className="py-5 text-center">
@@ -26,4 +29,4 @@ function Inicio() {
     );
 }
 
-export default Inicio;
+export default Inicio
