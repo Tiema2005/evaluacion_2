@@ -1,4 +1,3 @@
-
 import datosExcel from "../data/productos.json";
 
 const CLAVE = "productos";
@@ -23,13 +22,23 @@ function obtenerProductosIniciales() {
 function leer() {
     const guardado = localStorage.getItem(CLAVE);
 
-    if (guardado === null) {
-        const productosIniciales = obtenerProductosIniciales();
-        guardar(productosIniciales);
-        return productosIniciales;
+    if (guardado !== null) {
+        try {
+            const productos = JSON.parse(guardado);
+
+            if (Array.isArray(productos)) {
+                return productos;
+            }
+        } catch {
+            // Si los datos son inválidos, se recupera el catálogo inicial.
+        }
     }
 
-    return JSON.parse(guardado);
+    const productosIniciales = obtenerProductosIniciales();
+
+    guardar(productosIniciales);
+
+    return productosIniciales;
 }
 
 // Guarda la lista de productos en localStorage.
@@ -80,7 +89,9 @@ export function actualizarProducto(codigo, cambios) {
         return null;
     }
 
-    const { codigo: codigoIgnorado, ...datosActualizados } = cambios;
+    const datosActualizados = { ...cambios };
+
+    delete datosActualizados.codigo;
 
     const productosActualizados = lista.map((producto) =>
         producto.codigo === codigo
