@@ -17,7 +17,7 @@ function Inicio() {
             <h1>Ferretería Los Maestros</h1>
 
             <p className="lead mt-3">
-                Encuentra materiales, herramientas y productos ideales para tu Proyecto.
+                Encuentra materiales, herramientas y productos ideales para tu proyecto.
             </p>
 
             <Boton

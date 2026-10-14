@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useProductos } from "../context/ProductosContext";
-import CatalogoProductos from "../components/organisms/CatalogoProductos";
+import CampoInput from "../components/atoms/CampoInput";
 import FiltroCategoria from "../components/molecules/FiltroCategoria";
+import CatalogoProductos from "../components/organisms/CatalogoProductos";
 import { useTituloPagina } from "../hooks/useTituloPagina";
 
 function Catalogo() {
@@ -11,6 +12,7 @@ function Catalogo() {
     const { productos } = useProductos();
 
     const [categoria, setCategoria] = useState("");
+    const [busqueda, setBusqueda] = useState("");
 
     useTituloPagina("Catálogo de productos");
 
@@ -19,16 +21,28 @@ function Catalogo() {
         ...new Set(productos.map((producto) => producto.categoria))
     ].filter(Boolean);
 
-    // Filtra los productos según la categoría seleccionada
+    // Filtra los productos por categoría y búsqueda
     const productosFiltrados = productos.filter((producto) => {
-        return categoria === "" || producto.categoria === categoria;
+        const coincideCategoria =
+            categoria === "" || producto.categoria === categoria;
+
+        const textoBusqueda = busqueda.trim().toLowerCase();
+
+        const coincideBusqueda =
+            producto.nombre.toLowerCase().includes(textoBusqueda) ||
+            producto.codigo.toLowerCase().includes(textoBusqueda);
+
+        return coincideCategoria && coincideBusqueda;
     });
 
-    // Muestra hasta 12 productos de la categoría seleccionada
     const productosMostrar = productosFiltrados.slice(0, 12);
 
     function cambiarCategoria(evento) {
         setCategoria(evento.target.value);
+    }
+
+    function cambiarBusqueda(evento) {
+        setBusqueda(evento.target.value);
     }
 
     function verProducto(codigo) {
@@ -37,11 +51,19 @@ function Catalogo() {
 
     return (
         <Container className="py-4">
-            <h1>Catálogo de Productos</h1>
+            <h1>Catálogo de productos</h1>
 
             <p>
-                Explora los productos disponibles de nuestra ferretería.
+                Explora los productos disponibles en nuestra ferretería.
             </p>
+
+            <CampoInput
+                id="buscarProducto"
+                label="Buscar productos"
+                placeholder="Buscar por nombre o código"
+                value={busqueda}
+                onChange={cambiarBusqueda}
+            />
 
             <FiltroCategoria
                 categorias={categorias}
@@ -50,7 +72,7 @@ function Catalogo() {
             />
 
             {productosFiltrados.length === 0 ? (
-                <p>No se encontraron productos en esta categoría.</p>
+                <p>No se encontraron productos con los filtros seleccionados.</p>
             ) : (
                 <CatalogoProductos
                     productos={productosMostrar}
