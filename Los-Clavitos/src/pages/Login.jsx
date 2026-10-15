@@ -1,0 +1,33 @@
+import { Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import FormularioLogin from "../components/organisms/FormularioLogin";
+import { useTituloPagina } from "../hooks/useTituloPagina";
+
+function Login() {
+    const navigate = useNavigate();
+
+    useTituloPagina("Inicio de sesión");
+
+    function completarFormulario() {
+        navigate("/catalogo");
+    }
+
+    return (
+        <Container className="py-5">
+            <div className="mx-auto" style={{ maxWidth: "450px" }}>
+                <h1 className="mb-3">Inicio de sesión</h1>
+
+                <p className="text-muted">
+                    Formulario demostrativo para practicar
+                    validaciones y navegación en React.
+                </p>
+
+                <FormularioLogin
+                    onEnviar={completarFormulario}
+                />
+            </div>
+        </Container>
+    );
+}
+
+export default Login;

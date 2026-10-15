@@ -20,6 +20,10 @@ function Navbar(props) {
                         <Nav.Link as={Link} to="/catalogo">
                             Catálogo
                         </Nav.Link>
+
+                        <Nav.Link as={Link} to="/login">
+                            Iniciar sesión
+                        </Nav.Link>
                     </Nav>
                 </NavbarBootstrap.Collapse>
             </Container>
