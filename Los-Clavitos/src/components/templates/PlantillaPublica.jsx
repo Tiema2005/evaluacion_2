@@ -3,9 +3,19 @@ import Navbar from "../organisms/Navbar";
 import Footer from "../organisms/Footer";
 
 function PlantillaPublica() {
+    const enlaces = [
+        { texto: "Inicio", ruta: "/" },
+        { texto: "Catálogo", ruta: "/catalogo" },
+        { texto: "Categorías", ruta: "/categorias" },
+        { texto: "Iniciar Sesión", ruta: "/login" }
+    ];
+
     return (
         <div className="d-flex flex-column min-vh-100">
-            <Navbar nombre="Ferretería Los Maestros" />
+            <Navbar
+                nombre="Ferretería Los Maestros"
+                enlaces={enlaces}
+            />
 
             <main className="flex-grow-1">
                 <Outlet />

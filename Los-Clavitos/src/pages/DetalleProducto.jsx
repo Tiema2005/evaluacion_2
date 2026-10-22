@@ -56,9 +56,7 @@ function DetalleProducto() {
 
             <div className="card">
                 <div className="card-body">
-                    <h5>Información del producto</h5>
-
-                    <p><strong></strong></p>
+                    <h5 className="mb-3">Información del producto</h5>
 
                     <p><strong>Marca:</strong> {producto.marca}</p>
                     <p><strong>Categoría:</strong> {producto.categoria}</p>

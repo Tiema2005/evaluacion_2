@@ -6,7 +6,7 @@ import { useTituloPagina } from "../hooks/useTituloPagina";
 function Login() {
     const navigate = useNavigate();
 
-    useTituloPagina("Inicio de sesión");
+    useTituloPagina("Inicio de Sesión");
 
     function completarFormulario() {
         navigate("/catalogo");
@@ -15,7 +15,7 @@ function Login() {
     return (
         <Container className="py-5">
             <div className="mx-auto" style={{ maxWidth: "450px" }}>
-                <h1 className="mb-3">Inicio de sesión</h1>
+                <h1 className="mb-3">Inicio de Sesión</h1>
 
                 <p className="text-muted">
                     Formulario demostrativo para practicar

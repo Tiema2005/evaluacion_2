@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useProductos } from "../context/ProductosContext";
 import CampoInput from "../components/atoms/CampoInput";
 import FiltroCategoria from "../components/molecules/FiltroCategoria";
@@ -11,17 +11,19 @@ function Catalogo() {
     const navigate = useNavigate();
     const { productos } = useProductos();
 
-    const [categoria, setCategoria] = useState("");
+    const [parametros, setParametros] = useSearchParams();
     const [busqueda, setBusqueda] = useState("");
+
+    const categoria = parametros.get("categoria") || "";
 
     useTituloPagina("Catálogo de productos");
 
-    // Obtiene las categorías disponibles sin repetirlas
+    // Obtiene las categorías disponibles sin repetirlas.
     const categorias = [
         ...new Set(productos.map((producto) => producto.categoria))
     ].filter(Boolean);
 
-    // Filtra los productos por categoría y búsqueda
+    // Filtra los productos por categoría y búsqueda.
     const productosFiltrados = productos.filter((producto) => {
         const coincideCategoria =
             categoria === "" || producto.categoria === categoria;
@@ -38,7 +40,13 @@ function Catalogo() {
     const productosMostrar = productosFiltrados.slice(0, 12);
 
     function cambiarCategoria(evento) {
-        setCategoria(evento.target.value);
+        const nuevaCategoria = evento.target.value;
+
+        if (nuevaCategoria === "") {
+            setParametros({});
+        } else {
+            setParametros({ categoria: nuevaCategoria });
+        }
     }
 
     function cambiarBusqueda(evento) {

@@ -13,6 +13,7 @@ function ContadorCantidad(props) {
                 deshabilitado={cantidad <= minimo}
             />
 
+            # El span solo muestra la cantidad, no consideramos necesario un átomo adicional solo para eso.
             <span>{cantidad}</span>
 
             <Boton

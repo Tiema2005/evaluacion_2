@@ -2,9 +2,11 @@ import { Container, Nav, Navbar as NavbarBootstrap } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Navbar(props) {
+    const enlaces = props.enlaces || [];
+
     return (
         <NavbarBootstrap bg="dark" data-bs-theme="dark" expand="lg">
-            <Container>
+            <Container className="px-4 px-md-3">
                 <NavbarBootstrap.Brand as={Link} to="/">
                     {props.nombre}
                 </NavbarBootstrap.Brand>
@@ -13,17 +15,15 @@ function Navbar(props) {
 
                 <NavbarBootstrap.Collapse id="navbar-principal">
                     <Nav className="ms-auto">
-                        <Nav.Link as={Link} to="/">
-                            Inicio
-                        </Nav.Link>
-
-                        <Nav.Link as={Link} to="/catalogo">
-                            Catálogo
-                        </Nav.Link>
-
-                        <Nav.Link as={Link} to="/login">
-                            Iniciar sesión
-                        </Nav.Link>
+                        {enlaces.map((enlace) => (
+                            <Nav.Link
+                                key={enlace.ruta}
+                                as={Link}
+                                to={enlace.ruta}
+                            >
+                                {enlace.texto}
+                            </Nav.Link>
+                        ))}
                     </Nav>
                 </NavbarBootstrap.Collapse>
             </Container>
