@@ -6,6 +6,8 @@ import Categorias from "./pages/Categorias";
 import DetalleProducto from "./pages/DetalleProducto";
 import Login from "./pages/Login";
 import Carrito from "./pages/Carrito";
+import ConfirmarPedido from "./pages/ConfirmarPedido";
+import ResultadoPedido from "./pages/ResultadoPedido";
 
 function App() {
     return (
@@ -18,6 +20,8 @@ function App() {
                     <Route path="/producto/:codigo" element={<DetalleProducto />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/carrito" element={<Carrito />} />
+                    <Route path="/confirmar-pedido" element={<ConfirmarPedido />} />
+                    <Route path="/pedido/:numero" element={<ResultadoPedido />} />
                 </Route>
             </Routes>
         </BrowserRouter>

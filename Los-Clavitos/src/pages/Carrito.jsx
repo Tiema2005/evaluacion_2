@@ -24,6 +24,11 @@ function Carrito() {
         navigate("/catalogo");
     }
 
+    function irConfirmacion() {
+        navigate("/confirmar-pedido");
+    }
+
+
     function cambiarCantidad(codigo, cantidad) {
         actualizarCantidad(codigo, cantidad);
     }
@@ -77,6 +82,12 @@ function Carrito() {
                                     texto="Seguir comprando"
                                     variante="primary"
                                     onClick={volverCatalogo}
+                                />
+
+                                <Boton
+                                    texto="Confirmar pedido"
+                                    variante="success"
+                                    onClick={irConfirmacion}
                                 />
 
                                 <Boton
