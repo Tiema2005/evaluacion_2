@@ -3,6 +3,7 @@ import Boton from "./Boton";
 function ContadorCantidad(props) {
     const cantidad = props.cantidad ?? 1;
     const minimo = props.minimo ?? 1;
+    const maximo = props.maximo ?? Infinity;
 
     return (
         <div className="d-flex align-items-center gap-2">
@@ -13,13 +14,13 @@ function ContadorCantidad(props) {
                 deshabilitado={cantidad <= minimo}
             />
 
-            # El span solo muestra la cantidad, no consideramos necesario un átomo adicional solo para eso.
             <span>{cantidad}</span>
 
             <Boton
                 texto="+"
                 variante="outline-secondary"
                 onClick={props.onAumentar}
+                deshabilitado={cantidad >= maximo}
             />
         </div>
     );
