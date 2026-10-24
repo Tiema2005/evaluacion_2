@@ -1,4 +1,4 @@
-import Boton from "./Boton";
+import Boton from "../atoms/Boton";
 
 function ContadorCantidad(props) {
     const cantidad = props.cantidad ?? 1;

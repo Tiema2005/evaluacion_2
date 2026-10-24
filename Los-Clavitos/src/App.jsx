@@ -8,6 +8,8 @@ import Login from "./pages/Login";
 import Carrito from "./pages/Carrito";
 import ConfirmarPedido from "./pages/ConfirmarPedido";
 import ResultadoPedido from "./pages/ResultadoPedido";
+import Administracion from "./pages/Administracion";
+import Registro from "./pages/Registro";
 
 function App() {
     return (
@@ -22,6 +24,8 @@ function App() {
                     <Route path="/carrito" element={<Carrito />} />
                     <Route path="/confirmar-pedido" element={<ConfirmarPedido />} />
                     <Route path="/pedido/:numero" element={<ResultadoPedido />} />
+                    <Route path="/administracion" element={<Administracion />} />
+                    <Route path="/registro" element={<Registro />} />
                 </Route>
             </Routes>
         </BrowserRouter>

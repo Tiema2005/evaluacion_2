@@ -1,5 +1,5 @@
 import Boton from "../atoms/Boton";
-import ContadorCantidad from "../atoms/ContadorCantidad";
+import ContadorCantidad from "./ContadorCantidad";
 import Precio from "../atoms/Precio";
 
 function ItemCarrito(props) {

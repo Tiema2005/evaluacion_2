@@ -18,8 +18,7 @@ function Login() {
                 <h1 className="mb-3">Inicio de Sesión</h1>
 
                 <p className="text-muted">
-                    Formulario demostrativo para practicar
-                    validaciones y navegación en React.
+                    Ingresa tu correo electrónico y contraseña para continuar.
                 </p>
 
                 <FormularioLogin

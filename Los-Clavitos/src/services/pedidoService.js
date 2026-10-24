@@ -7,7 +7,7 @@ import { validarDatosPedido } from "../utils/validacionesPedido";
 
 const CLAVE = "pedidos";
 
-// READ: obtiene los pedidos almacenados.
+// Obtiene los pedidos guardados.
 export function listarPedidos() {
     const guardado = localStorage.getItem(CLAVE);
 
@@ -17,30 +17,27 @@ export function listarPedidos() {
 
     try {
         const pedidos = JSON.parse(guardado);
-
         return Array.isArray(pedidos) ? pedidos : [];
     } catch {
         return [];
     }
 }
 
-// READ: busca un pedido por su número.
+// Busca un pedido por su número.
 export function obtenerPedido(numero) {
     return listarPedidos().find(
         (pedido) => pedido.numero === numero
     ) ?? null;
 }
 
-// CREATE: registra un pedido y actualiza el inventario.
+// Registra un pedido y descuenta los productos del inventario.
 export function registrarPedido(datosCliente, carrito) {
-    // Validar los datos del cliente.
     const errores = validarDatosPedido(datosCliente);
 
     if (Object.keys(errores).length > 0) {
         throw new Error("Los datos del cliente no son válidos.");
     }
 
-    // Impedir pedidos sin productos.
     if (!Array.isArray(carrito) || carrito.length === 0) {
         throw new Error("No se puede registrar un carrito vacío.");
     }
@@ -48,10 +45,10 @@ export function registrarPedido(datosCliente, carrito) {
     const productos = listarProductos();
     const codigos = new Set();
 
-    // Comprobar cantidades y disponibilidad.
+    // Validar los productos y calcular sus subtotales.
     const detalles = carrito.map((item) => {
         const producto = productos.find(
-            (producto) => producto.codigo === item.codigo
+            (p) => p.codigo === item.codigo
         );
 
         if (!producto) {
@@ -64,10 +61,7 @@ export function registrarPedido(datosCliente, carrito) {
 
         codigos.add(item.codigo);
 
-        if (
-            !Number.isInteger(item.cantidad) ||
-            item.cantidad < 1
-        ) {
+        if (!Number.isInteger(item.cantidad) || item.cantidad < 1) {
             throw new Error("La cantidad del producto no es válida.");
         }
 
@@ -88,9 +82,8 @@ export function registrarPedido(datosCliente, carrito) {
         };
     });
 
-    // Calcular el total utilizando los precios del catálogo.
     const total = detalles.reduce(
-        (acumulado, item) => acumulado + item.subtotal,
+        (suma, item) => suma + item.subtotal,
         0
     );
 
@@ -103,53 +96,43 @@ export function registrarPedido(datosCliente, carrito) {
         estado: "Pendiente"
     };
 
-    // Guardar los stocks originales para poder revertir
-    // los cambios si falla el registro.
-    const stocksOriginales = detalles.map((item) => {
-        const producto = productos.find(
-            (producto) => producto.codigo === item.codigo
-        );
-
-        return {
-            codigo: item.codigo,
-            stock: producto.stock
-        };
-    });
-
+    // Guardar los productos que se modifican para poder restaurarlos.
     const actualizados = [];
 
     try {
-        // Descontar las unidades solicitadas.
-        detalles.forEach((item) => {
-            const original = stocksOriginales.find(
-                (producto) => producto.codigo === item.codigo
+        for (const item of detalles) {
+            const producto = productos.find(
+                (p) => p.codigo === item.codigo
             );
 
             const resultado = actualizarProducto(item.codigo, {
-                stock: original.stock - item.cantidad
+                stock: producto.stock - item.cantidad
             });
 
             if (resultado === null) {
                 throw new Error("No se pudo actualizar el inventario.");
             }
 
-            actualizados.push(original);
-        });
+            actualizados.push({
+                codigo: producto.codigo,
+                stock: producto.stock
+            });
+        }
 
-        // Guardar el pedido después de actualizar el inventario.
         const pedidos = listarPedidos();
 
         localStorage.setItem(
             CLAVE,
             JSON.stringify([...pedidos, pedido])
         );
+
     } catch {
-        // Intentar restaurar los stocks si ocurre un error.
-        actualizados.forEach((producto) => {
+        // Intentar recuperar el stock si falla el registro.
+        for (const producto of actualizados) {
             actualizarProducto(producto.codigo, {
                 stock: producto.stock
             });
-        });
+        }
 
         throw new Error("No se pudo completar el registro del pedido.");
     }
