@@ -4,11 +4,14 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { ProductosProvider } from "./context/ProductosProvider.jsx";
+import { CarritoProvider } from "./context/CarritoProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <ProductosProvider>
-            <App />
+            <CarritoProvider>
+                <App />
+            </CarritoProvider>
         </ProductosProvider>
     </StrictMode>
 );
