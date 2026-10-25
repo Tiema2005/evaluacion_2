@@ -239,3 +239,22 @@ Esta sección registra los avances diarios del proyecto, identificando las tarea
 - Se repitió la ejecución de Vitest y se comprobó que las pruebas funcionaran correctamente.
 - Se incorporó `coverage/` a `.gitignore` y se verificó que Git aplicara la regla.
 - Se generó el informe inicial de cobertura para identificar las partes del código probadas y las pendientes de ampliar.
+
+### 25/10/2026 — Felipe
+
+**Tareas realizadas:**
+- Se ejecutaron las pruebas unitarias y se confirmó que las 22 pruebas fueron aprobadas.
+- Se verificó la compilación del proyecto y el análisis de código sin errores.
+- Se generó y revisó el informe de cobertura de Vitest.
+- Se comprobó la integración entre el carrito, la administración de productos y el inventario.
+- Se corrigió la eliminación de productos del carrito cuando estos se eliminan desde Administración.
+- Se realizó una prueba controlada de fallo en Vitest y se restauró posteriormente el código correcto.
+
+**Problema detectado:**
+Un producto eliminado del inventario podía permanecer guardado en el carrito y provocar un mensaje de error al confirmar un pedido.
+
+**Solución aplicada:**
+Se conectó la eliminación del inventario con la eliminación del carrito mediante los Context existentes. Se comprobó que los productos eliminados desaparecen del carrito y que la validación de stock continúa funcionando correctamente.
+
+**Resultado:**
+22 pruebas aprobadas, compilación exitosa y análisis de código sin errores.
