@@ -6,7 +6,7 @@ import FormularioProducto from "../components/organisms/FormularioProducto";
 import Boton from "../components/atoms/Boton";
 import { useTituloPagina } from "../hooks/useTituloPagina";
 import { validarProducto } from "../utils/validacionesProducto";
-
+import { useCarrito } from "../context/CarritoContext";
 const PRODUCTO_VACIO = {
     codigo: "",
     nombre: "",
@@ -22,6 +22,7 @@ const PRODUCTO_VACIO = {
 
 function Administracion() {
     const { productos, crear, actualizar, eliminar } = useProductos();
+    const { eliminar: quitarDelCarrito } = useCarrito();
 
     const [producto, setProducto] = useState({ ...PRODUCTO_VACIO });
     const [codigoEditando, setCodigoEditando] = useState(null);
@@ -135,6 +136,9 @@ function Administracion() {
                 setError("No se encontró el producto para eliminar.");
                 return;
             }
+
+            // Quitar también el producto del carrito.
+            quitarDelCarrito(codigoEliminar);
 
             if (codigoEditando === codigoEliminar) {
                 setMostrarFormulario(false);
