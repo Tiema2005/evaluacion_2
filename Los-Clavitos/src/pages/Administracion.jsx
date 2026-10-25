@@ -7,6 +7,7 @@ import Boton from "../components/atoms/Boton";
 import { useTituloPagina } from "../hooks/useTituloPagina";
 import { validarProducto } from "../utils/validacionesProducto";
 import { useCarrito } from "../context/CarritoContext";
+
 const PRODUCTO_VACIO = {
     codigo: "",
     nombre: "",
@@ -156,11 +157,10 @@ function Administracion() {
 
     return (
         <Container className="py-4">
-            <h1>Administración de productos</h1>
+            <h1>Administración de Productos</h1>
 
             <p>
-                Gestiona el catálogo e inventario de
-                Ferretería Los Maestros.
+                Gestiona el catálogo e inventario de Ferretería Los Maestros.
             </p>
 
             <div className="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
@@ -226,7 +226,7 @@ function Administracion() {
             )}
 
             <h2 className="h4 mb-3">
-                Inventario de productos
+                Inventario de Productos
             </h2>
 
             <div className="table-responsive">

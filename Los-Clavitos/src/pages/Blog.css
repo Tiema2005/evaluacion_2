@@ -1,0 +1,9 @@
+.imagen-articulo {
+    height: 220px;
+    object-fit: cover;
+}
+
+.imagen-articulo-detalle {
+    max-height: 350px;
+    object-fit: cover;
+}

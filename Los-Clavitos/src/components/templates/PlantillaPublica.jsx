@@ -8,7 +8,7 @@ function PlantillaPublica() {
         { texto: "Catálogo", ruta: "/catalogo" },
         { texto: "Categorías", ruta: "/categorias" },
         { texto: "Carrito", ruta: "/carrito" },
-        { texto: "Administración", ruta: "/administracion" },
+        { texto: "Administración", ruta: "/admin" },
         { texto: "Registrarse", ruta: "/registro" },
         { texto: "Iniciar Sesión", ruta: "/login" }
     ];

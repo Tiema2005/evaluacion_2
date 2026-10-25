@@ -2,11 +2,23 @@ import { Container, Nav, Navbar as NavbarBootstrap } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Navbar(props) {
-    const enlaces = props.enlaces || [];
+    const enlaces = [
+        { texto: "Inicio", ruta: "/" },
+        { texto: "Catálogo", ruta: "/catalogo" },
+        { texto: "Categorías", ruta: "/categorias" },
+        { texto: "Ofertas", ruta: "/ofertas" },
+        { texto: "Nosotros", ruta: "/nosotros" },
+        { texto: "Blog", ruta: "/blog" },
+        { texto: "Contacto", ruta: "/contacto" },
+        { texto: "Carrito", ruta: "/carrito" },
+        { texto: "Administración", ruta: "/administracion" },
+        { texto: "Registrarse", ruta: "/registro" },
+        { texto: "Iniciar Sesión", ruta: "/login" }
+    ];
 
     return (
         <NavbarBootstrap bg="dark" data-bs-theme="dark" expand="lg">
-            <Container className="px-4 px-md-3">
+            <Container>
                 <NavbarBootstrap.Brand as={Link} to="/">
                     {props.nombre}
                 </NavbarBootstrap.Brand>
