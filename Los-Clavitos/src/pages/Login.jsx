@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import FormularioLogin from "../components/organisms/FormularioLogin";
@@ -14,12 +15,11 @@ function Login() {
 
     return (
         <Container className="py-5">
-            <div className="mx-auto" style={{ maxWidth: "450px" }}>
-                <h1 className="mb-3">Inicio de Sesión</h1>
-
-                <p className="text-muted">
-                    Ingresa tu correo electrónico y contraseña para continuar.
-                </p>
+            <div className="mx-auto col-12 col-md-8 col-lg-6">
+                <EncabezadoPagina
+                    titulo="Inicio de sesión"
+                    descripcion="Ingresa tu correo electrónico y contraseña para continuar."
+                />
 
                 <FormularioLogin
                     onEnviar={completarFormulario}

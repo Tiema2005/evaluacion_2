@@ -1,11 +1,9 @@
-
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
 import { useProductos } from "../context/ProductosContext";
 import { listarPedidos } from "../services/pedidoService";
 import { listarCategorias } from "../services/categoriaService";
-
 import Boton from "../components/atoms/Boton";
 import { useTituloPagina } from "../hooks/useTituloPagina";
 
@@ -26,12 +24,10 @@ function PanelAdministracion() {
 
     return (
         <Container className="py-4">
-            <h1>Panel de administración</h1>
-
-            <p>
-                Resumen general de los productos, pedidos
-                e inventario de Ferretería Los Maestros.
-            </p>
+            <EncabezadoPagina
+                titulo="Panel de administración"
+                descripcion="Resumen general de los productos, pedidos e inventario de Ferretería Los Maestros."
+            />
 
             <Row className="g-4 mt-2">
                 <Col xs={12} md={6} lg={4}>

@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useProductos } from "../context/ProductosContext";
@@ -25,12 +26,10 @@ function Ofertas() {
 
     return (
         <Container className="py-4">
-            <h1>Productos destacados</h1>
-
-            <p>
-                Descubre una selección de artículos disponibles
-                en nuestro catálogo de ferretería.
-            </p>
+            <EncabezadoPagina
+                titulo="Productos destacados"
+                descripcion="Descubre una selección de artículos disponibles en nuestro catálogo de ferretería."
+            />
 
             {destacados.length === 0 ? (
                 <p>

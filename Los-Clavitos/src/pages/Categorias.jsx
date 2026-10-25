@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useProductos } from "../context/ProductosContext";
@@ -20,11 +21,10 @@ function Categorias() {
 
     return (
         <Container className="py-4">
-            <h1>Categorías</h1>
-
-            <p>
-                Explora nuestros productos según su categoría.
-            </p>
+            <EncabezadoPagina
+                titulo="Categorías"
+                descripcion="Explora nuestros productos según su categoría."
+            />
 
             <Row>
                 {categorias.map((categoria) => (

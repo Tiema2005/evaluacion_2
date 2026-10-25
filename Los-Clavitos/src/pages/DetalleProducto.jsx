@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
@@ -75,11 +76,10 @@ function DetalleProducto() {
 
     return (
         <Container className="py-4">
-            <h1>{producto.nombre}</h1>
-
-            <p className="text-muted">
-                Código: {producto.codigo}
-            </p>
+            <EncabezadoPagina
+                titulo={producto.nombre}
+                descripcion={`Código: ${producto.codigo}`}
+            />
 
             <div className="card">
                 <div className="card-body">

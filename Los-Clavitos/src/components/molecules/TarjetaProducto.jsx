@@ -12,13 +12,13 @@ function TarjetaProducto(props) {
     );
 
     return (
-        <div className="card h-100">
+        <article className="card h-100">
             <div className="card-body d-flex flex-column">
-                <h5 className="card-title">
+                <h2 className="h5 card-title mb-3">
                     {producto.nombre}
-                </h5>
+                </h2>
 
-                <p className="card-text mb-1">
+                <p className="card-text text-secondary mb-2">
                     {producto.marca}
                 </p>
 
@@ -39,7 +39,7 @@ function TarjetaProducto(props) {
                     />
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
 

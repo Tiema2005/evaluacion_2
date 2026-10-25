@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Boton from "../components/atoms/Boton";
@@ -14,11 +15,10 @@ function Nosotros() {
 
     return (
         <Container className="py-4">
-            <h1>Sobre Ferretería Los Maestros</h1>
-
-            <p className="lead mt-3">
-                Materiales y herramientas para tus proyectos.
-            </p>
+            <EncabezadoPagina
+                titulo="Sobre Ferretería Los Maestros"
+                descripcion="Materiales y herramientas para tus proyectos."
+            />
 
             <p>
                 Ferretería Los Maestros ofrece un catálogo de

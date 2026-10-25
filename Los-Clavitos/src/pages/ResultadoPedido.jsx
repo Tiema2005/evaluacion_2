@@ -1,8 +1,9 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { Container } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import { obtenerPedido } from "../services/pedidoService";
 import Boton from "../components/atoms/Boton";
-import Precio from "../components/atoms/Precio";
+import ResumenPedido from "../components/molecules/ResumenPedido";
 import { useTituloPagina } from "../hooks/useTituloPagina";
 
 function ResultadoPedido() {
@@ -25,11 +26,12 @@ function ResultadoPedido() {
 
     if (!pedido) {
         return (
-            <Container className="py-4">
-                <h1>No se encontró el pedido</h1>
+            <Container className="py-5">
+                <EncabezadoPagina titulo="No se encontró el pedido" />
 
                 <p className="alert alert-danger" role="alert">
-                    No existe un pedido registrado con el número indicado.
+                    No existe un pedido registrado
+                    con el número indicado.
                 </p>
 
                 <Boton
@@ -42,25 +44,27 @@ function ResultadoPedido() {
     }
 
     return (
-        <Container className="py-4">
-            <h1>Pedido registrado correctamente</h1>
+        <Container className="py-5">
+            <EncabezadoPagina titulo="Pedido registrado correctamente" />
 
             <p className="alert alert-success" role="status">
                 Tu solicitud fue registrada exitosamente.
             </p>
 
             <div className="card">
-                <div className="card-body">
-                    <h4 className="mb-3">
+                <div className="card-body p-4">
+                    <h2 className="h4 fw-bold mb-4">
                         Comprobante del pedido
-                    </h4>
+                    </h2>
 
                     <p>
-                        <strong>Número:</strong> {pedido.numero}
+                        <strong>Número:</strong>{" "}
+                        {pedido.numero}
                     </p>
 
                     <p>
-                        <strong>Estado:</strong> {pedido.estado}
+                        <strong>Estado:</strong>{" "}
+                        {pedido.estado}
                     </p>
 
                     <p>
@@ -87,36 +91,17 @@ function ResultadoPedido() {
                         </p>
                     )}
 
-                    <hr />
+                    <hr className="my-4" />
 
-                    <h5>Productos solicitados</h5>
+                    <ResumenPedido
+                        items={pedido.productos}
+                        total={pedido.total}
+                        titulo="Productos solicitados"
+                    />
 
-                    {pedido.productos.map((producto) => (
-                        <div
-                            key={producto.codigo}
-                            className="mb-3"
-                        >
-                            <p className="mb-1">
-                                <strong>{producto.nombre}</strong>
-                            </p>
-
-                            <p className="mb-1">
-                                Cantidad: {producto.cantidad}
-                            </p>
-
-                            <Precio precio={producto.subtotal} />
-                        </div>
-                    ))}
-
-                    <hr />
-
-                    <h5>
-                        Total: <Precio precio={pedido.total} />
-                    </h5>
-
-                    <p className="text-muted mt-3">
-                        Este pedido fue registrado de manera simulada.
-                        No se ha realizado ningún cobro.
+                    <p className="text-secondary mt-4">
+                        Este pedido fue registrado de manera
+                        simulada. No se ha realizado ningún cobro.
                     </p>
 
                     <Boton

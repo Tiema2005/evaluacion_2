@@ -12,6 +12,14 @@ describe("Boton", () => {
         ).toBeInTheDocument();
     });
 
+    it("acepta type y disabled para formularios de administración", () => {
+        render(<Boton texto="Guardar" type="submit" disabled />);
+
+        const boton = screen.getByRole("button", { name: "Guardar" });
+        expect(boton).toHaveAttribute("type", "submit");
+        expect(boton).toBeDisabled();
+    });
+
     it("ejecuta onClick cuando el usuario hace clic", async () => {
         // Arrange: preparar la función simulada y el componente.
         const onClick = vi.fn();

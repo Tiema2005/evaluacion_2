@@ -4,9 +4,9 @@ function TarjetaCategoria(props) {
     return (
         <div className="card h-100">
             <div className="card-body d-flex flex-column">
-                <h5 className="card-title">
+                <h2 className="h5 card-title mb-3">
                     {props.categoria}
-                </h5>
+                </h2>
 
                 <div className="mt-auto">
                     <Boton

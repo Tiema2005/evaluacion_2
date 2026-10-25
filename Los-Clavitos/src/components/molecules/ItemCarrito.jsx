@@ -18,28 +18,28 @@ function ItemCarrito(props) {
     }
 
     return (
-        <div className="card mb-3">
-            <div className="card-body">
-                <div className="row g-3 align-items-center">
-                    <div className="col-md-5">
-                        <h5 className="card-title">
+        <article className="card mb-3 shadow-sm">
+            <div className="card-body p-4">
+                <div className="row g-4">
+                    <div className="col-12 col-md-6">
+                        <h2 className="h5 fw-bold mb-2">
                             {item.nombre}
-                        </h5>
+                        </h2>
 
-                        <p className="text-muted mb-1">
+                        <p className="text-secondary small mb-3">
                             Código: {item.codigo}
                         </p>
 
-                        <p className="mb-1">
-                            Precio unitario:
+                        <p className="text-secondary mb-1">
+                            Precio unitario
                         </p>
 
                         <Precio precio={item.precioVenta} />
                     </div>
 
-                    <div className="col-md-3">
-                        <p className="mb-2">
-                            <strong>Cantidad</strong>
+                    <div className="col-12 col-md-3">
+                        <p className="fw-semibold mb-2">
+                            Cantidad
                         </p>
 
                         <ContadorCantidad
@@ -51,24 +51,24 @@ function ItemCarrito(props) {
                         />
                     </div>
 
-                    <div className="col-md-2">
-                        <p className="mb-2">
-                            <strong>Subtotal</strong>
+                    <div className="col-12 col-md-3">
+                        <p className="fw-semibold mb-2">
+                            Subtotal
                         </p>
 
                         <Precio precio={item.subtotal} />
                     </div>
+                </div>
 
-                    <div className="col-md-2">
-                        <Boton
-                            texto="Eliminar"
-                            variante="outline-danger"
-                            onClick={quitar}
-                        />
-                    </div>
+                <div className="border-top mt-4 pt-3 d-flex justify-content-end">
+                    <Boton
+                        texto="Eliminar producto"
+                        variante="outline-danger"
+                        onClick={quitar}
+                    />
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
 

@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { useNavigate } from "react-router-dom";
 import { useTituloPagina } from "../hooks/useTituloPagina";
 import { articulos } from "../data/articulos";
@@ -16,16 +17,10 @@ function Blog() {
 
     return (
         <Container className="py-5">
-            <div className="mb-4">
-                <h1 className="fw-bold mb-3">
-                    Blog de Noticias
-                </h1>
-
-                <p className="text-secondary">
-                    Consejos e información para tus proyectos
-                    de construcción y ferretería.
-                </p>
-            </div>
+            <EncabezadoPagina
+                titulo="Blog de Noticias"
+                descripcion="Consejos e información para tus proyectos de construcción y ferretería."
+            />
 
             <Row className="g-4">
                 {articulos.map((articulo) => (

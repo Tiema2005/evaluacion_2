@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { Container, Badge } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import Boton from "../components/atoms/Boton";
@@ -24,7 +25,7 @@ function DetalleArticulo() {
     if (!articulo) {
         return (
             <Container className="py-5">
-                <h1>Artículo no encontrado</h1>
+                <EncabezadoPagina titulo="Artículo no encontrado" />
 
                 <p className="text-secondary my-3">
                     No existe un artículo con el
@@ -47,16 +48,15 @@ function DetalleArticulo() {
                     {articulo.categoria}
                 </Badge>
 
-                <h1 className="fw-bold mt-3 mb-3">
-                    {articulo.titulo}
-                </h1>
-
-                <p className="text-secondary">
-                    {articulo.resumen}
-                </p>
+                <div className="mt-3">
+                    <EncabezadoPagina
+                        titulo={articulo.titulo}
+                        descripcion={articulo.resumen}
+                    />
+                </div>
             </div>
 
-            <div className="card shadow-sm">
+            <div className="card">
                 <img
                     src={articulo.imagen}
                     alt={articulo.titulo}

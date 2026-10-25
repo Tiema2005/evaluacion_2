@@ -1,4 +1,4 @@
-
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { useMemo, useState } from "react";
 import {
     Alert,
@@ -7,11 +7,9 @@ import {
     Table
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
 import { useProductos } from "../context/ProductosContext";
 import Boton from "../components/atoms/Boton";
 import { useTituloPagina } from "../hooks/useTituloPagina";
-
 import {
     listarCategorias,
     crearCategoria,
@@ -107,12 +105,10 @@ function CategoriasAdmin() {
 
     return (
         <Container className="py-4">
-            <h1>Administración de categorías</h1>
-
-            <p>
-                Gestiona las categorías utilizadas en el
-                catálogo de Ferretería Los Maestros.
-            </p>
+            <EncabezadoPagina
+                titulo="Administración de categorías"
+                descripcion="Gestiona las categorías utilizadas en el catálogo de Ferretería Los Maestros."
+            />
 
             <div className="mb-4">
                 <Boton

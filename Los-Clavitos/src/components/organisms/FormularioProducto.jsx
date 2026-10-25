@@ -1,3 +1,4 @@
+import Selector from "../atoms/Selector";
 import CampoInput from "../atoms/CampoInput";
 import Boton from "../atoms/Boton";
 
@@ -35,10 +36,11 @@ function FormularioProducto(props) {
                 </div>
 
                 <div className="col-md-6">
-                    <CampoInput
+                    <Selector
                         id="categoriaInventario"
-                        name="categoria"
                         label="Categoría"
+                        name="categoria"
+                        opciones={props.categorias ?? []}
                         value={producto.categoria}
                         onChange={props.onCambiar}
                     />

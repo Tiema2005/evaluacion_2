@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -21,13 +22,8 @@ function Registro() {
 
     return (
         <Container className="py-5">
-            <div
-                className="mx-auto"
-                style={{ maxWidth: "500px" }}
-            >
-                <h1 className="mb-3">
-                    Registro de usuarios
-                </h1>
+            <div className="mx-auto col-12 col-md-8 col-lg-6">
+                <EncabezadoPagina titulo="Registro de usuarios" />
 
                 {registrado ? (
                     <div>

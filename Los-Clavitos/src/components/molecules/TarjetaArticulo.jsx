@@ -3,7 +3,7 @@ import Boton from "../atoms/Boton";
 
 function TarjetaArticulo({ articulo, onVerArticulo }) {
     return (
-        <article className="card h-100 shadow-sm">
+        <article className="card h-100">
             <img
                 src={articulo.imagen}
                 alt={articulo.titulo}

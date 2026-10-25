@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -37,8 +38,6 @@ function Catalogo() {
         return coincideCategoria && coincideBusqueda;
     });
 
-    const productosMostrar = productosFiltrados.slice(0, 12);
-
     function cambiarCategoria(evento) {
         const nuevaCategoria = evento.target.value;
 
@@ -59,11 +58,10 @@ function Catalogo() {
 
     return (
         <Container className="py-4">
-            <h1>Catálogo de productos</h1>
-
-            <p>
-                Explora los productos disponibles en nuestra ferretería.
-            </p>
+            <EncabezadoPagina
+                titulo="Catálogo de productos"
+                descripcion="Explora los productos disponibles en nuestra ferretería."
+            />
 
             <CampoInput
                 id="buscarProducto"
@@ -83,7 +81,7 @@ function Catalogo() {
                 <p>No se encontraron productos con los filtros seleccionados.</p>
             ) : (
                 <CatalogoProductos
-                    productos={productosMostrar}
+                    productos={productosFiltrados}
                     onVerProducto={verProducto}
                 />
             )}

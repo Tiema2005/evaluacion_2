@@ -1,7 +1,6 @@
-
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { Container, Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
 import { useProductos } from "../context/ProductosContext";
 import EtiquetaStock from "../components/atoms/EtiquetaStock";
 import Boton from "../components/atoms/Boton";
@@ -30,12 +29,10 @@ function StockCritico() {
 
     return (
         <Container className="py-4">
-            <h1>Productos con stock crítico</h1>
-
-            <p>
-                Consulta los productos agotados o con
-                existencias inferiores al stock mínimo.
-            </p>
+            <EncabezadoPagina
+                titulo="Productos con stock crítico"
+                descripcion="Consulta los productos agotados o con existencias inferiores al stock mínimo."
+            />
 
             <div className="d-flex flex-wrap gap-2 mb-4">
                 <Boton

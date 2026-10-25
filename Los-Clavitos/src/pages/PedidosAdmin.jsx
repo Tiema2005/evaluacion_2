@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { Container, Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { listarPedidos } from "../services/pedidoService";
@@ -22,12 +23,10 @@ function PedidosAdmin() {
 
     return (
         <Container className="py-4">
-            <h1>Administración de pedidos</h1>
-
-            <p>
-                Consulta los pedidos registrados
-                en Ferretería Los Maestros.
-            </p>
+            <EncabezadoPagina
+                titulo="Administración de pedidos"
+                descripcion="Consulta los pedidos registrados en Ferretería Los Maestros."
+            />
 
             <div className="mb-4">
                 <Boton

@@ -1,3 +1,5 @@
+import { listarCategorias } from "../services/categoriaService";
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { useState } from "react";
 import { Container, Table } from "react-bootstrap";
 import { useProductos } from "../context/ProductosContext";
@@ -157,11 +159,10 @@ function Administracion() {
 
     return (
         <Container className="py-4">
-            <h1>Administración de Productos</h1>
-
-            <p>
-                Gestiona el catálogo e inventario de Ferretería Los Maestros.
-            </p>
+            <EncabezadoPagina
+                titulo="Administración de Productos"
+                descripcion="Gestiona el catálogo e inventario de Ferretería Los Maestros."
+            />
 
             <div className="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
                 <p className="mb-0">
@@ -216,6 +217,7 @@ function Administracion() {
                     <div className="card-body">
                         <FormularioProducto
                             producto={producto}
+                            categorias={listarCategorias(productos).map((item) => item.nombre)}
                             editando={codigoEditando !== null}
                             onCambiar={cambiarCampo}
                             onGuardar={guardarProducto}

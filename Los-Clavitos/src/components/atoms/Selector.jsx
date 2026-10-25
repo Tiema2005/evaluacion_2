@@ -9,6 +9,7 @@ function Selector(props) {
             <Form.Label>{props.label}</Form.Label>
 
             <Form.Select
+                name={props.name}
                 value={props.value}
                 onChange={props.onChange}
                 disabled={props.deshabilitado}

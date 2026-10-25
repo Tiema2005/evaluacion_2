@@ -1,8 +1,5 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import PlantillaPublica from "./components/templates/PlantillaPublica";
-
 import Inicio from "./pages/Inicio";
 import Catalogo from "./pages/Catalogo";
 import Categorias from "./pages/Categorias";
@@ -10,16 +7,13 @@ import DetalleProducto from "./pages/DetalleProducto";
 import Carrito from "./pages/Carrito";
 import ConfirmarPedido from "./pages/ConfirmarPedido";
 import ResultadoPedido from "./pages/ResultadoPedido";
-
 import Login from "./pages/Login";
 import Registro from "./pages/Registro";
-
 import Nosotros from "./pages/Nosotros";
 import Ofertas from "./pages/Ofertas";
 import Blog from "./pages/Blog";
 import DetalleArticulo from "./pages/DetalleArticulo";
 import Contacto from "./pages/Contacto";
-
 import Administracion from "./pages/Administracion";
 import PanelAdministracion from "./pages/PanelAdministracion";
 import PedidosAdmin from "./pages/PedidosAdmin";

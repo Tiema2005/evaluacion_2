@@ -1,3 +1,4 @@
+import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Boton from "../components/atoms/Boton";
@@ -18,12 +19,10 @@ function Contacto() {
 
     return (
         <Container className="py-4">
-            <h1>Contacto</h1>
-
-            <p className="lead">
-                ¿Necesitas materiales o herramientas
-                para tu proyecto?
-            </p>
+            <EncabezadoPagina
+                titulo="Contacto"
+                descripcion="¿Necesitas materiales o herramientas para tu proyecto?"
+            />
 
             <p>
                 En Ferretería Los Maestros puedes consultar
