@@ -1,4 +1,5 @@
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
+
 import { useMemo, useState } from "react";
 import {
     Alert,
@@ -7,15 +8,17 @@ import {
     Table
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useProductos } from "../context/ProductosContext";
-import Boton from "../components/atoms/Boton";
-import { useTituloPagina } from "../hooks/useTituloPagina";
+
+import { useProductos } from "../../context/ProductosContext";
+import Boton from "../../components/atoms/Boton";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
+
 import {
     listarCategorias,
     crearCategoria,
     renombrarCategoria,
     eliminarCategoria
-} from "../services/categoriaService";
+} from "../../services/categoriaService";
 
 function CategoriasAdmin() {
     const navigate = useNavigate();

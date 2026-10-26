@@ -3,6 +3,8 @@ import CampoInput from "../atoms/CampoInput";
 import Selector from "../atoms/Selector";
 import Boton from "../atoms/Boton";
 import { validarDatosPedido } from "../../utils/validacionesPedido";
+import { obtenerUsuario } from "../../services/usuarioService";
+import { Form } from "react-bootstrap";
 
 function FormularioPedido(props) {
     const [datos, setDatos] = useState({
@@ -10,7 +12,8 @@ function FormularioPedido(props) {
         apellidos: "",
         correo: "",
         tipoEntrega: "Retiro en tienda",
-        direccion: ""
+        direccion: "",
+        condicionPago: "Pago al retirar o recibir"
     });
 
     const [errores, setErrores] = useState({});
@@ -20,7 +23,8 @@ function FormularioPedido(props) {
 
         setDatos((anteriores) => ({
             ...anteriores,
-            [name]: value
+            [name]: value,
+            ...(name === "correo" ? { condicionPago: "Pago al retirar o recibir" } : {})
         }));
     }
 
@@ -48,6 +52,9 @@ function FormularioPedido(props) {
         // La página se encargará de registrar el pedido.
         props.onEnviar(datos);
     }
+
+    const perfil = obtenerUsuario(datos.correo);
+    const permiteCredito = Boolean(perfil?.cuentaCorriente);
 
     return (
         <form onSubmit={enviarFormulario} noValidate>
@@ -115,6 +122,28 @@ function FormularioPedido(props) {
                     errorTexto={errores.direccion}
                 />
             )}
+
+            <h4 className="mb-3 mt-4">Condición de pago</h4>
+            <Form.Group className="mb-3" controlId="condicionPagoPedido">
+                <Form.Label>Modalidad (simulada)</Form.Label>
+                <Form.Select
+                    name="condicionPago"
+                    value={datos.condicionPago}
+                    onChange={cambiarCampo}
+                    isInvalid={Boolean(errores.condicionPago)}
+                >
+                    <option value="Pago al retirar o recibir">Pago al retirar o recibir</option>
+                    {permiteCredito && (
+                        <option value="Cuenta corriente - pago pendiente a fin de mes">
+                            Cuenta corriente - pago pendiente a fin de mes
+                        </option>
+                    )}
+                </Form.Select>
+                <Form.Control.Feedback type="invalid">{errores.condicionPago}</Form.Control.Feedback>
+                <Form.Text>
+                    La opción de cuenta corriente está disponible solo para perfiles habilitados desde Administración.
+                </Form.Text>
+            </Form.Group>
 
             <Boton
                 texto="Confirmar pedido"

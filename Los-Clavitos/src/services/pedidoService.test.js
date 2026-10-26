@@ -7,6 +7,7 @@ import {
 } from "./pedidoService";
 
 import { obtenerProducto } from "./productoService";
+import { crearUsuario } from "./usuarioService";
 
 describe("pedidoService", () => {
     const producto = {
@@ -31,6 +32,7 @@ describe("pedidoService", () => {
     };
 
     beforeEach(() => {
+        localStorage.removeItem("usuarios");
         // Arrange: preparar datos independientes.
         localStorage.setItem(
             "productos",
@@ -75,6 +77,30 @@ describe("pedidoService", () => {
 
         expect(listarPedidos()).toHaveLength(1);
         expect(obtenerPedido(pedido.numero)).toEqual(pedido);
+    });
+
+    it("registra el pago pendiente para un cliente con cuenta corriente", () => {
+        crearUsuario({
+            nombre: "Cliente",
+            apellidos: "De Prueba",
+            correo: "cliente@correo.cl",
+            rol: "Cliente",
+            cuentaCorriente: true
+        });
+        const pedido = registrarPedido({
+            ...cliente,
+            condicionPago: "Cuenta corriente - pago pendiente a fin de mes"
+        }, [{ codigo: "TEST001", cantidad: 1 }]);
+        expect(pedido.estadoPago).toBe("Pendiente a fin de mes");
+    });
+
+    it("rechaza cuenta corriente para perfiles no habilitados", () => {
+        expect(() => registrarPedido({
+            ...cliente,
+            condicionPago: "Cuenta corriente - pago pendiente a fin de mes"
+        }, [{ codigo: "TEST001", cantidad: 1 }]))
+            .toThrow("no tiene una cuenta corriente habilitada");
+        expect(listarPedidos()).toHaveLength(0);
     });
 
     it("descuenta el stock después de registrar un pedido", () => {

@@ -1,6 +1,7 @@
 import Boton from "../atoms/Boton";
 import ContadorCantidad from "./ContadorCantidad";
 import Precio from "../atoms/Precio";
+import ImagenProducto from "../atoms/ImagenProducto";
 
 function ItemCarrito(props) {
     const item = props.item;
@@ -20,8 +21,11 @@ function ItemCarrito(props) {
     return (
         <article className="card mb-3 shadow-sm">
             <div className="card-body p-4">
-                <div className="row g-4">
-                    <div className="col-12 col-md-6">
+                <div className="row g-4 align-items-center">
+                    <div className="col-12 col-sm-3 col-md-2">
+                        <ImagenProducto producto={item} variante="carrito" />
+                    </div>
+                    <div className="col-12 col-sm-9 col-md-4">
                         <h2 className="h5 fw-bold mb-2">
                             {item.nombre}
                         </h2>

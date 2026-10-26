@@ -1,11 +1,13 @@
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
+
 import { Container, Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useProductos } from "../context/ProductosContext";
-import EtiquetaStock from "../components/atoms/EtiquetaStock";
-import Boton from "../components/atoms/Boton";
-import { obtenerEstadoStock } from "../utils/stockUtils";
-import { useTituloPagina } from "../hooks/useTituloPagina";
+
+import { useProductos } from "../../context/ProductosContext";
+import EtiquetaStock from "../../components/atoms/EtiquetaStock";
+import Boton from "../../components/atoms/Boton";
+import { obtenerEstadoStock } from "../../utils/stockUtils";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
 
 function StockCritico() {
     const navigate = useNavigate();

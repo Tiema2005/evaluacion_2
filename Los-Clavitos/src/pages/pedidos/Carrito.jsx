@@ -1,11 +1,11 @@
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useCarrito } from "../context/CarritoContext";
-import ItemCarrito from "../components/molecules/ItemCarrito";
-import Boton from "../components/atoms/Boton";
-import Precio from "../components/atoms/Precio";
-import { useTituloPagina } from "../hooks/useTituloPagina";
+import { useCarrito } from "../../context/CarritoContext";
+import ItemCarrito from "../../components/molecules/ItemCarrito";
+import Boton from "../../components/atoms/Boton";
+import Precio from "../../components/atoms/Precio";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
 
 function Carrito() {
     const navigate = useNavigate();

@@ -7,7 +7,7 @@ function Navbar({ nombre, enlaces = [] }) {
     const ubicacion = useLocation();
     const cerrarMenu = () => setExpandido(false);
     const informacion = ["Nosotros", "Blog", "Contacto"];
-    const cuenta = ["Registrarse", "Iniciar Sesión"];
+    const cuenta = ["Mis compras", "Registrarse", "Iniciar Sesión"];
     const principales = enlaces.filter(
         (enlace) => ![...informacion, ...cuenta].includes(enlace.texto)
     );

@@ -1,14 +1,14 @@
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useCarrito } from "../context/CarritoContext";
-import { useProductos } from "../context/ProductosContext";
-import FormularioPedido from "../components/organisms/FormularioPedido";
-import ResumenPedido from "../components/molecules/ResumenPedido";
-import Boton from "../components/atoms/Boton";
-import { registrarPedido } from "../services/pedidoService";
-import { useTituloPagina } from "../hooks/useTituloPagina";
+import { useCarrito } from "../../context/CarritoContext";
+import { useProductos } from "../../context/ProductosContext";
+import FormularioPedido from "../../components/organisms/FormularioPedido";
+import ResumenPedido from "../../components/molecules/ResumenPedido";
+import Boton from "../../components/atoms/Boton";
+import { registrarPedido } from "../../services/pedidoService";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
 
 function ConfirmarPedido() {
     const navigate = useNavigate();

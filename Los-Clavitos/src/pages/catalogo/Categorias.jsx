@@ -1,9 +1,9 @@
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useProductos } from "../context/ProductosContext";
-import TarjetaCategoria from "../components/molecules/TarjetaCategoria";
-import { useTituloPagina } from "../hooks/useTituloPagina";
+import { useProductos } from "../../context/ProductosContext";
+import TarjetaCategoria from "../../components/molecules/TarjetaCategoria";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
 
 function Categorias() {
     const navigate = useNavigate();

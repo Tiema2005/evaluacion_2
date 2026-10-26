@@ -34,5 +34,13 @@ export function validarDatosPedido(datos) {
         errores.direccion = "La dirección es obligatoria para el despacho.";
     }
 
+    const condiciones = [
+        "Pago al retirar o recibir",
+        "Cuenta corriente - pago pendiente a fin de mes"
+    ];
+    if (datos.condicionPago && !condiciones.includes(datos.condicionPago)) {
+        errores.condicionPago = "Seleccione una condición de pago válida.";
+    }
+
     return errores;
 }

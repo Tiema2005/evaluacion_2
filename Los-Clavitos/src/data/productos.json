@@ -13,7 +13,8 @@
   "Column7": "P. Compra (CLP)",
   "Column8": "P. Venta (CLP)",
   "Column9": "Stock",
-  "Column10": "Stock mínimo"
+  "Column10": "Stock mínimo",
+  "Column11": "Imagen referencial (URL)"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MC001",
@@ -25,7 +26,8 @@
   "Column7": 3200,
   "Column8": 5990,
   "Column9": 80,
-  "Column10": 20
+  "Column10": 20,
+  "Column11": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MC002",
@@ -37,7 +39,8 @@
   "Column7": 4100,
   "Column8": 7490,
   "Column9": 40,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MC003",
@@ -49,7 +52,8 @@
   "Column7": 2800,
   "Column8": 5200,
   "Column9": 50,
-  "Column10": 15
+  "Column10": 15,
+  "Column11": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MC004",
@@ -61,7 +65,8 @@
   "Column7": 3500,
   "Column8": 6490,
   "Column9": 30,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MC005",
@@ -73,7 +78,8 @@
   "Column7": 800,
   "Column8": 1800,
   "Column9": 60,
-  "Column10": 20
+  "Column10": 20,
+  "Column11": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MC006",
@@ -85,7 +91,8 @@
   "Column7": 700,
   "Column8": 1500,
   "Column9": 60,
-  "Column10": 20
+  "Column10": 20,
+  "Column11": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MC007",
@@ -97,7 +104,8 @@
   "Column7": 190,
   "Column8": 380,
   "Column9": 500,
-  "Column10": 100
+  "Column10": 100,
+  "Column11": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MC008",
@@ -109,7 +117,8 @@
   "Column7": 280,
   "Column8": 550,
   "Column9": 300,
-  "Column10": 80
+  "Column10": 80,
+  "Column11": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MC009",
@@ -121,7 +130,8 @@
   "Column7": 620,
   "Column8": 1200,
   "Column9": 200,
-  "Column10": 50
+  "Column10": 50,
+  "Column11": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MC010",
@@ -133,7 +143,8 @@
   "Column7": 890,
   "Column8": 1690,
   "Column9": 100,
-  "Column10": 30
+  "Column10": 30,
+  "Column11": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "PT001",
@@ -145,7 +156,8 @@
   "Column7": 5200,
   "Column8": 9990,
   "Column9": 40,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "PT002",
@@ -157,7 +169,8 @@
   "Column7": 6800,
   "Column8": 12990,
   "Column9": 30,
-  "Column10": 8
+  "Column10": 8,
+  "Column11": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "PT003",
@@ -169,7 +182,8 @@
   "Column7": 7200,
   "Column8": 13990,
   "Column9": 25,
-  "Column10": 8  
+  "Column10": 8,
+  "Column11": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "PT004",
@@ -181,7 +195,8 @@
   "Column7": 2100,
   "Column8": 4290,
   "Column9": 50,
-  "Column10": 15
+  "Column10": 15,
+  "Column11": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "PT005",
@@ -193,7 +208,8 @@
   "Column7": 4800,
   "Column8": 9490,
   "Column9": 30,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "PT006",
@@ -205,7 +221,8 @@
   "Column7": 9500,
   "Column8": 17990,
   "Column9": 15,
-  "Column10": 5
+  "Column10": 5,
+  "Column11": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "PT007",
@@ -217,7 +234,8 @@
   "Column7": 1900,
   "Column8": 3990,
   "Column9": 30,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "PT008",
@@ -229,7 +247,8 @@
   "Column7": 800,
   "Column8": 1690,
   "Column9": 40,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "PT009",
@@ -241,7 +260,8 @@
   "Column7": 1200,
   "Column8": 2490,
   "Column9": 60,
-  "Column10": 20
+  "Column10": 20,
+  "Column11": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HM001",
@@ -253,7 +273,8 @@
   "Column7": 4200,
   "Column8": 7990,
   "Column9": 20,
-  "Column10": 5
+  "Column10": 5,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HM002",
@@ -265,7 +286,8 @@
   "Column7": 3800,
   "Column8": 7290,
   "Column9": 15,
-  "Column10": 5
+  "Column10": 5,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HM003",
@@ -277,7 +299,8 @@
   "Column7": 900,
   "Column8": 1990,
   "Column9": 30,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HM004",
@@ -289,7 +312,8 @@
   "Column7": 900,
   "Column8": 1990,
   "Column9": 30,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HM005",
@@ -301,7 +325,8 @@
   "Column7": 4500,
   "Column8": 8490,
   "Column9": 12,
-  "Column10": 4
+  "Column10": 4,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HM006",
@@ -313,7 +338,8 @@
   "Column7": 2800,
   "Column8": 5490,
   "Column9": 15,
-  "Column10": 5
+  "Column10": 5,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HM007",
@@ -325,7 +351,8 @@
   "Column7": 4900,
   "Column8": 9490,
   "Column9": 10,
-  "Column10": 3
+  "Column10": 3,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HM008",
@@ -337,7 +364,8 @@
   "Column7": 5500,
   "Column8": 10490,
   "Column9": 8,
-  "Column10": 3
+  "Column10": 3,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HM009",
@@ -349,7 +377,8 @@
   "Column7": 2200,
   "Column8": 4290,
   "Column9": 25,
-  "Column10": 8
+  "Column10": 8,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HM010",
@@ -361,7 +390,8 @@
   "Column7": 3200,
   "Column8": 6490,
   "Column9": 20,
-  "Column10": 6
+  "Column10": 6,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HE001",
@@ -373,7 +403,8 @@
   "Column7": 42000,
   "Column8": 79990,
   "Column9": 8,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HE002",
@@ -385,7 +416,8 @@
   "Column7": 55000,
   "Column8": 104990,
   "Column9": 5,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HE003",
@@ -397,7 +429,8 @@
   "Column7": 28000,
   "Column8": 54990,
   "Column9": 8,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HE004",
@@ -409,7 +442,8 @@
   "Column7": 38000,
   "Column8": 72990,
   "Column9": 4,
-  "Column10": 1
+  "Column10": 1,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HE005",
@@ -421,7 +455,8 @@
   "Column7": 18000,
   "Column8": 34990,
   "Column9": 6,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "HE006",
@@ -433,7 +468,8 @@
   "Column7": 22000,
   "Column8": 42990,
   "Column9": 4,
-  "Column10": 1
+  "Column10": 1,
+  "Column11": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS001",
@@ -445,7 +481,8 @@
   "Column7": 2800,
   "Column8": 5490,
   "Column9": 30,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS002",
@@ -457,7 +494,8 @@
   "Column7": 3900,
   "Column8": 7490,
   "Column9": 25,
-  "Column10": 8
+  "Column10": 8,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS003",
@@ -469,7 +507,8 @@
   "Column7": 9500,
   "Column8": 17990,
   "Column9": 15,
-  "Column10": 5
+  "Column10": 5,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS004",
@@ -481,7 +520,8 @@
   "Column7": 180,
   "Column8": 390,
   "Column9": 100,
-  "Column10": 30
+  "Column10": 30,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS005",
@@ -493,7 +533,8 @@
   "Column7": 220,
   "Column8": 450,
   "Column9": 80,
-  "Column10": 25
+  "Column10": 25,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS006",
@@ -505,7 +546,8 @@
   "Column7": 150,
   "Column8": 320,
   "Column9": 80,
-  "Column10": 25
+  "Column10": 25,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS007",
@@ -517,7 +559,8 @@
   "Column7": 1800,
   "Column8": 3490,
   "Column9": 30,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS008",
@@ -529,7 +572,8 @@
   "Column7": 2500,
   "Column8": 4990,
   "Column9": 20,
-  "Column10": 8
+  "Column10": 8,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS009",
@@ -541,7 +585,8 @@
   "Column7": 12000,
   "Column8": 22990,
   "Column9": 10,
-  "Column10": 3
+  "Column10": 3,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS010",
@@ -553,7 +598,8 @@
   "Column7": 15000,
   "Column8": 28990,
   "Column9": 8,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS011",
@@ -565,7 +611,8 @@
   "Column7": 350,
   "Column8": 790,
   "Column9": 80,
-  "Column10": 25
+  "Column10": 25,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "GS012",
@@ -577,7 +624,8 @@
   "Column7": 2800,
   "Column8": 5490,
   "Column9": 25,
-  "Column10": 8
+  "Column10": 8,
+  "Column11": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL001",
@@ -589,7 +637,8 @@
   "Column7": 290,
   "Column8": 590,
   "Column9": 100,
-  "Column10": 30
+  "Column10": 30,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL002",
@@ -601,7 +650,8 @@
   "Column7": 390,
   "Column8": 790,
   "Column9": 100,
-  "Column10": 30
+  "Column10": 30,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL003",
@@ -613,7 +663,8 @@
   "Column7": 490,
   "Column8": 990,
   "Column9": 80,
-  "Column10": 25
+  "Column10": 25,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL004",
@@ -625,7 +676,8 @@
   "Column7": 1900,
   "Column8": 3690,
   "Column9": 50,
-  "Column10": 15
+  "Column10": 15,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL005",
@@ -637,7 +689,8 @@
   "Column7": 2800,
   "Column8": 5490,
   "Column9": 40,
-  "Column10": 12
+  "Column10": 12,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL006",
@@ -649,7 +702,8 @@
   "Column7": 1600,
   "Column8": 3190,
   "Column9": 50,
-  "Column10": 15
+  "Column10": 15,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL007",
@@ -661,7 +715,8 @@
   "Column7": 2200,
   "Column8": 4290,
   "Column9": 35,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL008",
@@ -673,7 +728,8 @@
   "Column7": 12000,
   "Column8": 22990,
   "Column9": 8,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL009",
@@ -685,7 +741,8 @@
   "Column7": 3200,
   "Column8": 6490,
   "Column9": 20,
-  "Column10": 5
+  "Column10": 5,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL010",
@@ -697,7 +754,8 @@
   "Column7": 3500,
   "Column8": 6990,
   "Column9": 20,
-  "Column10": 5
+  "Column10": 5,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL011",
@@ -709,7 +767,8 @@
   "Column7": 1900,
   "Column8": 3990,
   "Column9": 60,
-  "Column10": 20
+  "Column10": 20,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL012",
@@ -721,7 +780,8 @@
   "Column7": 2200,
   "Column8": 4490,
   "Column9": 50,
-  "Column10": 15
+  "Column10": 15,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "EL013",
@@ -733,7 +793,8 @@
   "Column7": 5800,
   "Column8": 11490,
   "Column9": 20,
-  "Column10": 6
+  "Column10": 6,
+  "Column11": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "TR001",
@@ -745,7 +806,8 @@
   "Column7": 1500,
   "Column8": 2990,
   "Column9": 40,
-  "Column10": 12
+  "Column10": 12,
+  "Column11": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "TR002",
@@ -757,7 +819,8 @@
   "Column7": 1200,
   "Column8": 2490,
   "Column9": 40,
-  "Column10": 12
+  "Column10": 12,
+  "Column11": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "TR003",
@@ -769,7 +832,8 @@
   "Column7": 1800,
   "Column8": 3490,
   "Column9": 30,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "TR004",
@@ -781,7 +845,8 @@
   "Column7": 1600,
   "Column8": 3190,
   "Column9": 35,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "TR005",
@@ -793,7 +858,8 @@
   "Column7": 1400,
   "Column8": 2890,
   "Column9": 30,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "TR006",
@@ -805,7 +871,8 @@
   "Column7": 120,
   "Column8": 290,
   "Column9": 200,
-  "Column10": 50
+  "Column10": 50,
+  "Column11": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "TR007",
@@ -817,7 +884,8 @@
   "Column7": 480,
   "Column8": 990,
   "Column9": 60,
-  "Column10": 15
+  "Column10": 15,
+  "Column11": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "TR008",
@@ -829,7 +897,8 @@
   "Column7": 8500,
   "Column8": 15990,
   "Column9": 8,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MD001",
@@ -841,7 +910,8 @@
   "Column7": 2100,
   "Column8": 4290,
   "Column9": 40,
-  "Column10": 12
+  "Column10": 12,
+  "Column11": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MD002",
@@ -853,7 +923,8 @@
   "Column7": 3800,
   "Column8": 7490,
   "Column9": 30,
-  "Column10": 10
+  "Column10": 10,
+  "Column11": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MD003",
@@ -865,7 +936,8 @@
   "Column7": 18000,
   "Column8": 34990,
   "Column9": 20,
-  "Column10": 5
+  "Column10": 5,
+  "Column11": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MD004",
@@ -877,7 +949,8 @@
   "Column7": 14000,
   "Column8": 27990,
   "Column9": 15,
-  "Column10": 4
+  "Column10": 4,
+  "Column11": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MD005",
@@ -889,7 +962,8 @@
   "Column7": 9500,
   "Column8": 18990,
   "Column9": 18,
-  "Column10": 5
+  "Column10": 5,
+  "Column11": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MD006",
@@ -901,7 +975,8 @@
   "Column7": 4500,
   "Column8": 8990,
   "Column9": 30,
-  "Column10": 8
+  "Column10": 8,
+  "Column11": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "MD007",
@@ -913,7 +988,8 @@
   "Column7": 6200,
   "Column8": 11990,
   "Column9": 15,
-  "Column10": 4
+  "Column10": 4,
+  "Column11": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "SE001",
@@ -925,7 +1001,8 @@
   "Column7": 3500,
   "Column8": 6990,
   "Column9": 15,
-  "Column10": 5
+  "Column10": 5,
+  "Column11": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "SE002",
@@ -937,7 +1014,8 @@
   "Column7": 1800,
   "Column8": 3690,
   "Column9": 20,
-  "Column10": 6
+  "Column10": 6,
+  "Column11": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "SE003",
@@ -949,7 +1027,8 @@
   "Column7": 1200,
   "Column8": 2490,
   "Column9": 25,
-  "Column10": 8
+  "Column10": 8,
+  "Column11": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "SE004",
@@ -961,7 +1040,8 @@
   "Column7": 5500,
   "Column8": 10990,
   "Column9": 10,
-  "Column10": 3
+  "Column10": 3,
+  "Column11": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "SE005",
@@ -973,7 +1053,8 @@
   "Column7": 18000,
   "Column8": 34990,
   "Column9": 4,
-  "Column10": 1
+  "Column10": 1,
+  "Column11": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "JA001",
@@ -985,7 +1066,8 @@
   "Column7": 12000,
   "Column8": 22990,
   "Column9": 6,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "JA002",
@@ -997,7 +1079,8 @@
   "Column7": 15000,
   "Column8": 28990,
   "Column9": 5,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "JA003",
@@ -1009,7 +1092,8 @@
   "Column7": 2800,
   "Column8": 5490,
   "Column9": 10,
-  "Column10": 3
+  "Column10": 3,
+  "Column11": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "JA004",
@@ -1021,7 +1105,8 @@
   "Column7": 5500,
   "Column8": 10990,
   "Column9": 8,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=75"
  },
  {
   "FERRETERÍA LOS MAESTROS": "JA005",
@@ -1033,7 +1118,8 @@
   "Column7": 4800,
   "Column8": 9490,
   "Column9": 6,
-  "Column10": 2
+  "Column10": 2,
+  "Column11": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=75"
  }
 ],
 "Categorías":[

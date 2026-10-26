@@ -15,6 +15,7 @@ function obtenerProductosIniciales() {
         precioVenta: producto.Column8,
         stock: producto.Column9,
         stockMinimo: producto.Column10,
+        imagen: producto.Column11 || "",
     }));
 }
 

@@ -1,12 +1,12 @@
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { useProductos } from "../context/ProductosContext";
-import CampoInput from "../components/atoms/CampoInput";
-import FiltroCategoria from "../components/molecules/FiltroCategoria";
-import CatalogoProductos from "../components/organisms/CatalogoProductos";
-import { useTituloPagina } from "../hooks/useTituloPagina";
+import { useProductos } from "../../context/ProductosContext";
+import CampoInput from "../../components/atoms/CampoInput";
+import FiltroCategoria from "../../components/molecules/FiltroCategoria";
+import CatalogoProductos from "../../components/organisms/CatalogoProductos";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
 
 function Catalogo() {
     const navigate = useNavigate();

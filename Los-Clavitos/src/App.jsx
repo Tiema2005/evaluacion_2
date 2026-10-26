@@ -1,24 +1,33 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import PlantillaPublica from "./components/templates/PlantillaPublica";
+
 import Inicio from "./pages/Inicio";
-import Catalogo from "./pages/Catalogo";
-import Categorias from "./pages/Categorias";
-import DetalleProducto from "./pages/DetalleProducto";
-import Carrito from "./pages/Carrito";
-import ConfirmarPedido from "./pages/ConfirmarPedido";
-import ResultadoPedido from "./pages/ResultadoPedido";
-import Login from "./pages/Login";
-import Registro from "./pages/Registro";
+import Catalogo from "./pages/catalogo/Catalogo";
+import Categorias from "./pages/catalogo/Categorias";
+import DetalleProducto from "./pages/catalogo/DetalleProducto";
+import Carrito from "./pages/pedidos/Carrito";
+import ConfirmarPedido from "./pages/pedidos/ConfirmarPedido";
+import ResultadoPedido from "./pages/pedidos/ResultadoPedido";
+
+import Login from "./pages/auth/Login";
+import Registro from "./pages/auth/Registro";
+
 import Nosotros from "./pages/Nosotros";
-import Ofertas from "./pages/Ofertas";
-import Blog from "./pages/Blog";
-import DetalleArticulo from "./pages/DetalleArticulo";
+import Ofertas from "./pages/catalogo/Ofertas";
+import Blog from "./pages/blog/Blog";
+import DetalleArticulo from "./pages/blog/DetalleArticulo";
 import Contacto from "./pages/Contacto";
-import Administracion from "./pages/Administracion";
-import PanelAdministracion from "./pages/PanelAdministracion";
-import PedidosAdmin from "./pages/PedidosAdmin";
-import StockCritico from "./pages/StockCritico";
-import CategoriasAdmin from "./pages/CategoriasAdmin";
+
+import Administracion from "./pages/admin/Administracion";
+import PanelAdministracion from "./pages/admin/PanelAdministracion";
+import PedidosAdmin from "./pages/admin/PedidosAdmin";
+import StockCritico from "./pages/admin/StockCritico";
+import CategoriasAdmin from "./pages/admin/CategoriasAdmin";
+import UsuariosAdmin from "./pages/admin/UsuariosAdmin";
+import HistorialPedidos from "./pages/pedidos/HistorialPedidos";
+import ReportesAdmin from "./pages/admin/ReportesAdmin";
 
 function App() {
     return (
@@ -45,6 +54,7 @@ function App() {
 
                     <Route path="/login" element={<Login />} />
                     <Route path="/registro" element={<Registro />} />
+                    <Route path="/historial" element={<HistorialPedidos />} />
 
                     <Route path="/nosotros" element={<Nosotros />} />
                     <Route path="/ofertas" element={<Ofertas />} />
@@ -71,6 +81,8 @@ function App() {
                         path="/admin/categorias"
                         element={<CategoriasAdmin />}
                     />
+                    <Route path="/admin/usuarios" element={<UsuariosAdmin />} />
+                    <Route path="/admin/reportes" element={<ReportesAdmin />} />
                     <Route
                         path="/administracion"
                         element={<Administracion />}

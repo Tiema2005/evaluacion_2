@@ -1,8 +1,8 @@
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import FormularioLogin from "../components/organisms/FormularioLogin";
-import { useTituloPagina } from "../hooks/useTituloPagina";
+import FormularioLogin from "../../components/organisms/FormularioLogin";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
 
 function Login() {
     const navigate = useNavigate();

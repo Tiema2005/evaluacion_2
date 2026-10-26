@@ -4,6 +4,7 @@ import {
 } from "./productoService";
 
 import { validarDatosPedido } from "../utils/validacionesPedido";
+import { obtenerUsuario } from "./usuarioService";
 
 const CLAVE = "pedidos";
 
@@ -36,6 +37,14 @@ export function registrarPedido(datosCliente, carrito) {
 
     if (Object.keys(errores).length > 0) {
         throw new Error("Los datos del cliente no son válidos.");
+    }
+
+    const condicionPago = datosCliente.condicionPago || "Pago al retirar o recibir";
+    if (condicionPago === "Cuenta corriente - pago pendiente a fin de mes") {
+        const usuario = obtenerUsuario(datosCliente.correo);
+        if (!usuario?.cuentaCorriente) {
+            throw new Error("El cliente no tiene una cuenta corriente habilitada.");
+        }
     }
 
     if (!Array.isArray(carrito) || carrito.length === 0) {
@@ -93,7 +102,11 @@ export function registrarPedido(datosCliente, carrito) {
         cliente: { ...datosCliente },
         productos: detalles,
         total,
-        estado: "Pendiente"
+        estado: "Pendiente",
+        condicionPago,
+        estadoPago: condicionPago === "Cuenta corriente - pago pendiente a fin de mes"
+            ? "Pendiente a fin de mes"
+            : "Pago por realizar al recibir o retirar"
     };
 
     // Guardar los productos que se modifican para poder restaurarlos.

@@ -1,4 +1,5 @@
 import Boton from "../atoms/Boton";
+import ImagenProducto from "../atoms/ImagenProducto";
 import EtiquetaStock from "../atoms/EtiquetaStock";
 import Precio from "../atoms/Precio";
 import { obtenerEstadoStock } from "../../utils/stockUtils";
@@ -13,6 +14,7 @@ function TarjetaProducto(props) {
 
     return (
         <article className="card h-100">
+            <ImagenProducto producto={producto} />
             <div className="card-body d-flex flex-column">
                 <h2 className="h5 card-title mb-3">
                     {producto.nombre}

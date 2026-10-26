@@ -1,10 +1,10 @@
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
 import { Container } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
-import { obtenerPedido } from "../services/pedidoService";
-import Boton from "../components/atoms/Boton";
-import ResumenPedido from "../components/molecules/ResumenPedido";
-import { useTituloPagina } from "../hooks/useTituloPagina";
+import { obtenerPedido } from "../../services/pedidoService";
+import Boton from "../../components/atoms/Boton";
+import ResumenPedido from "../../components/molecules/ResumenPedido";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
 
 function ResultadoPedido() {
     const navigate = useNavigate();
@@ -90,6 +90,15 @@ function ResultadoPedido() {
                             {pedido.cliente.direccion}
                         </p>
                     )}
+
+                    <p>
+                        <strong>Condición de pago:</strong>{" "}
+                        {pedido.condicionPago || "Pago al retirar o recibir"}
+                    </p>
+                    <p>
+                        <strong>Estado del pago:</strong>{" "}
+                        {pedido.estadoPago || "Pago por realizar al recibir o retirar"}
+                    </p>
 
                     <hr className="my-4" />
 

@@ -9,6 +9,7 @@ function PlantillaPublica() {
         { texto: "Categorías", ruta: "/categorias" },
         { texto: "Ofertas", ruta: "/ofertas" },
         { texto: "Carrito", ruta: "/carrito" },
+        { texto: "Mis compras", ruta: "/historial" },
         { texto: "Administración", ruta: "/admin" },
         { texto: "Nosotros", ruta: "/nosotros" },
         { texto: "Blog", ruta: "/blog" },

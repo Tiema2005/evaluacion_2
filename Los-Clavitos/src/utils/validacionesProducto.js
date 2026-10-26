@@ -38,6 +38,15 @@ export function validarProducto(producto) {
         datos[campo] = Number(producto[campo]);
     });
 
+    datos.imagen = String(producto.imagen ?? "").trim();
+
+    if (datos.imagen && !/^https?:\/\//i.test(datos.imagen)) {
+        return {
+            error: "La imagen debe ser una URL que comience con http:// o https://.",
+            datos: null
+        };
+    }
+
     const { precioCompra, precioVenta, stock, stockMinimo } = datos;
 
     if (

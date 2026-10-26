@@ -1,19 +1,27 @@
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import FormularioRegistro from "../components/organisms/FormularioRegistro";
-import Boton from "../components/atoms/Boton";
-import { useTituloPagina } from "../hooks/useTituloPagina";
+import FormularioRegistro from "../../components/organisms/FormularioRegistro";
+import Boton from "../../components/atoms/Boton";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
+import { crearUsuario } from "../../services/usuarioService";
 
 function Registro() {
     const navigate = useNavigate();
     const [registrado, setRegistrado] = useState(false);
+    const [error, setError] = useState("");
 
     useTituloPagina("Registro de usuarios");
 
-    function completarRegistro() {
-        setRegistrado(true);
+    function completarRegistro(datos) {
+        try {
+            crearUsuario({ ...datos, rol: "Cliente", cuentaCorriente: false });
+            setError("");
+            setRegistrado(true);
+        } catch (fallo) {
+            setError(fallo.message);
+        }
     }
 
     function irLogin() {
@@ -31,7 +39,7 @@ function Registro() {
                             className="alert alert-success"
                             role="status"
                         >
-                            Los datos ingresados se validaron correctamente.
+                            Tu perfil de demostración se registró correctamente. No se almacenan contraseñas.
                         </p>
 
                         <Boton
@@ -46,6 +54,7 @@ function Registro() {
                             Completa tus datos personales para continuar.
                         </p>
 
+                        {error && <p className="alert alert-danger" role="alert">{error}</p>}
                         <FormularioRegistro
                             onEnviar={completarRegistro}
                         />

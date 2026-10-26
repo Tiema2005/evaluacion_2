@@ -1,10 +1,10 @@
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
 import { Container, Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { listarPedidos } from "../services/pedidoService";
-import Boton from "../components/atoms/Boton";
-import Precio from "../components/atoms/Precio";
-import { useTituloPagina } from "../hooks/useTituloPagina";
+import { listarPedidos } from "../../services/pedidoService";
+import Boton from "../../components/atoms/Boton";
+import Precio from "../../components/atoms/Precio";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
 
 function PedidosAdmin() {
     const navigate = useNavigate();
@@ -52,6 +52,7 @@ function PedidosAdmin() {
                             <th>Número</th>
                             <th>Cliente</th>
                             <th>Estado</th>
+                            <th>Pago</th>
                             <th>Total</th>
                             <th>Acciones</th>
                         </tr>
@@ -68,6 +69,7 @@ function PedidosAdmin() {
                                 </td>
 
                                 <td>{pedido.estado}</td>
+                                <td>{pedido.estadoPago || "Pago por realizar al recibir o retirar"}</td>
 
                                 <td>
                                     <Precio precio={pedido.total} />

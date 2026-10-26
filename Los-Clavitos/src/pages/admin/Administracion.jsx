@@ -1,14 +1,14 @@
-import { listarCategorias } from "../services/categoriaService";
-import EncabezadoPagina from "../components/molecules/EncabezadoPagina";
+import { listarCategorias } from "../../services/categoriaService";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
 import { useState } from "react";
 import { Container, Table } from "react-bootstrap";
-import { useProductos } from "../context/ProductosContext";
-import FilaInventario from "../components/molecules/FilaInventario";
-import FormularioProducto from "../components/organisms/FormularioProducto";
-import Boton from "../components/atoms/Boton";
-import { useTituloPagina } from "../hooks/useTituloPagina";
-import { validarProducto } from "../utils/validacionesProducto";
-import { useCarrito } from "../context/CarritoContext";
+import { useProductos } from "../../context/ProductosContext";
+import FilaInventario from "../../components/molecules/FilaInventario";
+import FormularioProducto from "../../components/organisms/FormularioProducto";
+import Boton from "../../components/atoms/Boton";
+import { useTituloPagina } from "../../hooks/useTituloPagina";
+import { validarProducto } from "../../utils/validacionesProducto";
+import { useCarrito } from "../../context/CarritoContext";
 
 const PRODUCTO_VACIO = {
     codigo: "",
@@ -20,7 +20,8 @@ const PRODUCTO_VACIO = {
     precioCompra: "",
     precioVenta: "",
     stock: "",
-    stockMinimo: ""
+    stockMinimo: "",
+    imagen: ""
 };
 
 function Administracion() {

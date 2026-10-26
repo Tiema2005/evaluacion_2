@@ -121,6 +121,15 @@ function FormularioProducto(props) {
                 </div>
             </div>
 
+            <CampoInput
+                id="imagenInventario"
+                name="imagen"
+                label="Imagen del producto (URL opcional)"
+                placeholder="https://ejemplo.cl/imagen.jpg"
+                value={producto.imagen ?? ""}
+                onChange={props.onCambiar}
+            />
+
             <div className="d-flex flex-wrap gap-2">
                 <Boton
                     texto={
