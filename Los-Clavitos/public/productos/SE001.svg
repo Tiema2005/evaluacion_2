@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Casco seguridad blanco">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#FFF9DD"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M206 263Q206 159 336 139V116H376V139Q505 159 505 263Z" fill="#B69837" stroke="#64748B" stroke-width="7"/><path d="M184 264Q355 315 524 264" fill="none" stroke="#64748B" stroke-width="17" stroke-linecap="round"/><path d="M351 146V258" stroke="#FFF" stroke-width="8" opacity=".75"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">SE001</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Casco seguridad blanco</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">3M · Imagen ilustrativa</text>
+    </svg>

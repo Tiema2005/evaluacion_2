@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Ampolleta LED 9W E27 luz fría">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#FFF9E4"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M351 113C273 113 238 177 275 238L313 281H387L428 238C465 177 429 113 351 113Z" fill="#FFF6C3" stroke="#B49C54" stroke-width="7"/><path d="M313 284H389V320H313Z" fill="#A3ADBA" stroke="#64748B" stroke-width="6"/><path d="M322 331H381" stroke="#475569" stroke-width="12" stroke-linecap="round"/><path d="M332 173Q351 191 371 173" stroke="#F2CC4D" stroke-width="10" fill="none"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">EL011</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Ampolleta LED 9W E27 luz fría</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Philips · Imagen ilustrativa</text>
+    </svg>

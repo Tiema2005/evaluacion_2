@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Serrucho 20&quot; 7 dientes por pulgada">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#ECF4FA"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M187 155L472 206L418 328L235 235Z" fill="#CBD5E1" stroke="#64748B" stroke-width="7"/><path d="M235 235L236 266L260 248L271 290L298 264L313 304L343 282L350 328L418 328" fill="none" stroke="#475569" stroke-width="7"/><rect x="166" y="126" width="83" height="72" rx="25" fill="#627C92" stroke="#475569" stroke-width="7"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">HM007</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Serrucho 20&quot; 7 dientes por pulgada</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Stanley · Imagen ilustrativa</text>
+    </svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Cable dúplex paralelo 2x1.5mm² (por metro)">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#FFF9E4"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M246 188C179 245 271 327 352 277C421 233 370 143 309 168C256 191 288 258 340 239" stroke="#D3A243" stroke-width="26" fill="none" stroke-linecap="round"/><path d="M335 237L462 238L502 209" stroke="#475569" stroke-width="18" fill="none" stroke-linecap="round"/><path d="M501 209L544 209" stroke="#D6A85E" stroke-width="16"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">EL003</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="417" font-size="24" fill="#243645" font-weight="700">Cable dúplex paralelo 2x1.5mm²</text><text x="42" y="448" font-size="24" fill="#243645" font-weight="700">(por metro)</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Condulac · Imagen ilustrativa</text>
+    </svg>

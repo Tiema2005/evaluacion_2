@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Pintura látex exterior 1 galón blanco">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#EAF8FF"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <ellipse cx="355" cy="142" rx="105" ry="26" fill="#D3E4EC" stroke="#668294" stroke-width="6"/><path d="M250 142L270 317Q355 346 440 317L460 142Z" fill="#F3F7FB" stroke="#668294" stroke-width="6"/><rect x="271" y="194" width="168" height="82" rx="8" fill="#3F91BB"/><path d="M269 144Q270 65 355 73Q440 65 442 144" fill="none" stroke="#64748B" stroke-width="11"/><path d="M321 226Q355 182 387 225Q355 271 321 226" fill="#FFF" opacity=".8"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">PT003</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="417" font-size="24" fill="#243645" font-weight="700">Pintura látex exterior 1 galón</text><text x="42" y="448" font-size="24" fill="#243645" font-weight="700">blanco</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Kömex · Imagen ilustrativa</text>
+    </svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Nivel de burbuja 60 cm">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#ECF4FA"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <rect x="166" y="174" width="382" height="98" rx="15" fill="#627C92" stroke="#475569" stroke-width="7"/><rect x="312" y="182" width="89" height="77" rx="15" fill="#E5F7E2" stroke="#64748B" stroke-width="5"/><circle cx="355" cy="222" r="14" fill="#65A30D"/><path d="M351 184V258" stroke="#94A3B8" stroke-width="3"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">HM008</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Nivel de burbuja 60 cm</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Stanley · Imagen ilustrativa</text>
+    </svg>

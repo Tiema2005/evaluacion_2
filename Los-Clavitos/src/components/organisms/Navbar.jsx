@@ -1,87 +1,55 @@
-import { useState } from "react";
-import { Container, Nav, NavDropdown, Navbar as NavbarBootstrap } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { datosTienda } from "../../data/tienda";
 
-function Navbar({ nombre, enlaces = [] }) {
-    const [expandido, setExpandido] = useState(false);
-    const ubicacion = useLocation();
-    const cerrarMenu = () => setExpandido(false);
-    const informacion = ["Nosotros", "Blog", "Contacto"];
-    const cuenta = ["Mis compras", "Registrarse", "Iniciar Sesión"];
-    const principales = enlaces.filter(
-        (enlace) => ![...informacion, ...cuenta].includes(enlace.texto)
+function NavbarPrincipal({ nombre, enlaces }) {
+    const accesosPrincipales = enlaces.filter((enlace) =>
+        ["Inicio", "Catálogo", "Categorías", "Ofertas", "Carrito", "Administración"].includes(enlace.texto)
     );
 
-    function enlacePorNombre(nombreEnlace) {
-        return enlaces.find((enlace) => enlace.texto === nombreEnlace);
-    }
+    const accesosInformacion = enlaces.filter((enlace) =>
+        ["Nosotros", "Blog", "Contacto", "Mis compras", "Registrarse", "Iniciar Sesión"].includes(enlace.texto)
+    );
 
     return (
-        <NavbarBootstrap
-            bg="dark"
-            data-bs-theme="dark"
-            expand="xl"
-            className="barra-principal py-2"
-            expanded={expandido}
-            onToggle={setExpandido}
-        >
-            <Container>
-                <NavbarBootstrap.Brand as={Link} to="/" onClick={cerrarMenu}>
-                    {nombre}
-                </NavbarBootstrap.Brand>
+        <>
+            <div className="barra-superior py-2">
+                <Container className="d-flex flex-column flex-md-row justify-content-between gap-2 small">
+                    <span>{datosTienda.telefono} · {datosTienda.horarioAtencion}</span>
+                    <span>{datosTienda.direccion}, {datosTienda.comuna}</span>
+                </Container>
+            </div>
 
-                <NavbarBootstrap.Toggle aria-controls="navbar-principal" />
+            <Navbar expand="lg" bg="white" className="shadow-sm border-bottom barra-principal sticky-top">
+                <Container>
+                    <Navbar.Brand as={Link} to="/" className="d-flex flex-column">
+                        <span>{nombre}</span>
+                        <small className="text-secondary">Materiales y herramientas para tu obra</small>
+                    </Navbar.Brand>
 
-                <NavbarBootstrap.Collapse id="navbar-principal">
-                    <Nav className="ms-auto align-items-xl-center">
-                        {principales.map((enlace) => (
-                            <Nav.Link
-                                key={enlace.ruta}
-                                as={Link}
-                                to={enlace.ruta}
-                                active={ubicacion.pathname === enlace.ruta}
-                                onClick={cerrarMenu}
-                            >
-                                {enlace.texto}
-                            </Nav.Link>
-                        ))}
+                    <Navbar.Toggle aria-controls="menu-principal" />
 
-                        <NavDropdown title="Información" id="menu-informacion">
-                            {informacion.map((texto) => {
-                                const enlace = enlacePorNombre(texto);
-                                return enlace ? (
-                                    <NavDropdown.Item
-                                        key={enlace.ruta}
-                                        as={Link}
-                                        to={enlace.ruta}
-                                        onClick={cerrarMenu}
-                                    >
-                                        {texto}
+                    <Navbar.Collapse id="menu-principal">
+                        <Nav className="ms-auto align-items-lg-center gap-lg-1">
+                            {accesosPrincipales.map((enlace) => (
+                                <Nav.Link key={enlace.texto} as={Link} to={enlace.ruta}>
+                                    {enlace.texto}
+                                </Nav.Link>
+                            ))}
+
+                            <NavDropdown title="Más" id="menu-secundario" align="end">
+                                {accesosInformacion.map((enlace) => (
+                                    <NavDropdown.Item key={enlace.texto} as={Link} to={enlace.ruta}>
+                                        {enlace.texto}
                                     </NavDropdown.Item>
-                                ) : null;
-                            })}
-                        </NavDropdown>
-
-                        <NavDropdown title="Cuenta" id="menu-cuenta">
-                            {cuenta.map((texto) => {
-                                const enlace = enlacePorNombre(texto);
-                                return enlace ? (
-                                    <NavDropdown.Item
-                                        key={enlace.ruta}
-                                        as={Link}
-                                        to={enlace.ruta}
-                                        onClick={cerrarMenu}
-                                    >
-                                        {texto}
-                                    </NavDropdown.Item>
-                                ) : null;
-                            })}
-                        </NavDropdown>
-                    </Nav>
-                </NavbarBootstrap.Collapse>
-            </Container>
-        </NavbarBootstrap>
+                                ))}
+                            </NavDropdown>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </>
     );
 }
 
-export default Navbar;
+export default NavbarPrincipal;

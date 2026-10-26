@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Ripio 25 KG">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#FFF5E8"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <polygon points="230,217 270,182 327,203 346,262 275,290 225,259" fill="#C18D56" stroke="#6B7280" stroke-width="5" opacity=".7"/><polygon points="336,227 376,192 433,213 452,272 381,300 331,269" fill="#C18D56" stroke="#6B7280" stroke-width="5" opacity=".85"/><polygon points="282,147 322,112 379,133 398,192 327,220 277,189" fill="#C18D56" stroke="#6B7280" stroke-width="5" opacity=".95"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">MC006</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Ripio 25 KG</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Granel · Imagen ilustrativa</text>
+    </svg>

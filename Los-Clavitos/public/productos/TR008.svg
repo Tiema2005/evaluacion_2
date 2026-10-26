@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Anclaje químico epoxi 300ml">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#F0F5FB"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <rect x="300" y="138" width="120" height="181" rx="18" fill="#F5F8FA" stroke="#64748B" stroke-width="7"/><rect x="312" y="184" width="96" height="91" fill="#6B8096"/><path d="M348 139V87H372V139" fill="#94A3B8" stroke="#64748B" stroke-width="5"/><path d="M356 87L375 68" stroke="#64748B" stroke-width="9"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">TR008</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Anclaje químico epoxi 300ml</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Fischer · Imagen ilustrativa</text>
+    </svg>

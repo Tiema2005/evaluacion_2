@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Guantes de cuero talla L">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#FFF9DD"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M282 125Q259 121 258 164L253 244L218 210Q194 200 183 226Q179 239 199 267L270 344H355L396 262L387 153Q384 132 363 132Q343 132 343 157L339 126Q335 104 311 109Q288 112 289 137Z" fill="#B69837" stroke="#64748B" stroke-width="8"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">SE002</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Guantes de cuero talla L</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">3M · Imagen ilustrativa</text>
+    </svg>

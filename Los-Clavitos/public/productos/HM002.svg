@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Alicate universal 8&quot;">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#ECF4FA"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M286 120Q342 175 361 218Q381 173 440 120L454 151Q423 223 380 247L448 345L414 363L355 274L297 363L263 345L330 247Q290 220 271 150Z" fill="#627C92" stroke="#475569" stroke-width="7"/><circle cx="355" cy="245" r="16" fill="#F3F4F6" stroke="#475569" stroke-width="5"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">HM002</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Alicate universal 8&quot;</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Stanley · Imagen ilustrativa</text>
+    </svg>

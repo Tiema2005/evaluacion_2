@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Grifería cocina monocomando cuello alto">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#E8F9F9"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M230 252H470" stroke="#64748B" stroke-width="28"/><rect x="305" y="205" width="110" height="90" rx="15" fill="#3B97A4" stroke="#64748B" stroke-width="7"/><path d="M356 207V140M280 142H434" stroke="#475569" stroke-width="14" stroke-linecap="round"/><path d="M492 245Q510 268 492 298" stroke="#48A5C2" stroke-width="9" fill="none"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">GS010</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="417" font-size="24" fill="#243645" font-weight="700">Grifería cocina monocomando cuello</text><text x="42" y="448" font-size="24" fill="#243645" font-weight="700">alto</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Corona · Imagen ilustrativa</text>
+    </svg>

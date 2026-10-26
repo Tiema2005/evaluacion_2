@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Bloque de hormigón 19x19x39 cm">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#FFF5E8"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <rect x="205" y="141" width="305" height="203" rx="10" fill="#CBD5E1" stroke="#687A88" stroke-width="8"/><rect x="235" y="175" width="105" height="133" rx="5" fill="#64748B"/><rect x="377" y="175" width="104" height="133" rx="5" fill="#64748B"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">MC009</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Bloque de hormigón 19x19x39 cm</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Volcán · Imagen ilustrativa</text>
+    </svg>

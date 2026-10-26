@@ -1,89 +1,134 @@
-import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
-import { useState } from "react";
-import { Container } from "react-bootstrap";
+import { useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { Container, Row, Col, Form } from "react-bootstrap";
 import { useProductos } from "../../context/ProductosContext";
-import CampoInput from "../../components/atoms/CampoInput";
-import FiltroCategoria from "../../components/molecules/FiltroCategoria";
+import EncabezadoPagina from "../../components/molecules/EncabezadoPagina";
 import CatalogoProductos from "../../components/organisms/CatalogoProductos";
+import Selector from "../../components/atoms/Selector";
 import { useTituloPagina } from "../../hooks/useTituloPagina";
 
 function Catalogo() {
     const navigate = useNavigate();
     const { productos } = useProductos();
+    const [searchParams, setSearchParams] = useSearchParams();
 
-    const [parametros, setParametros] = useSearchParams();
-    const [busqueda, setBusqueda] = useState("");
+    const categoriaInicial = searchParams.get("categoria") || "";
+    const [categoria, setCategoria] = useState(categoriaInicial);
+    const [busqueda, setBusqueda] = useState(searchParams.get("q") || "");
 
-    const categoria = parametros.get("categoria") || "";
+    useTituloPagina("Catálogo");
 
-    useTituloPagina("Catálogo de productos");
+    const categorias = useMemo(
+        () => [...new Set(productos.map((producto) => producto.categoria))].filter(Boolean),
+        [productos]
+    );
 
-    // Obtiene las categorías disponibles sin repetirlas.
-    const categorias = [
-        ...new Set(productos.map((producto) => producto.categoria))
-    ].filter(Boolean);
+    const productosFiltrados = useMemo(() => {
+        return productos.filter((producto) => {
+            const coincideCategoria = !categoria || producto.categoria === categoria;
+            const texto = `${producto.nombre} ${producto.marca} ${producto.subcategoria} ${producto.codigo}`.toLowerCase();
+            const coincideBusqueda = texto.includes(busqueda.trim().toLowerCase());
+            return coincideCategoria && coincideBusqueda;
+        });
+    }, [productos, categoria, busqueda]);
 
-    // Filtra los productos por categoría y búsqueda.
-    const productosFiltrados = productos.filter((producto) => {
-        const coincideCategoria =
-            categoria === "" || producto.categoria === categoria;
+    function actualizarFiltros(nuevaCategoria, nuevaBusqueda) {
+        const nuevos = {};
 
-        const textoBusqueda = busqueda.trim().toLowerCase();
+        if (nuevaCategoria) {
+            nuevos.categoria = nuevaCategoria;
+        }
+        if (nuevaBusqueda.trim()) {
+            nuevos.q = nuevaBusqueda.trim();
+        }
 
-        const coincideBusqueda =
-            producto.nombre.toLowerCase().includes(textoBusqueda) ||
-            producto.codigo.toLowerCase().includes(textoBusqueda);
-
-        return coincideCategoria && coincideBusqueda;
-    });
+        setSearchParams(nuevos);
+    }
 
     function cambiarCategoria(evento) {
         const nuevaCategoria = evento.target.value;
-
-        if (nuevaCategoria === "") {
-            setParametros({});
-        } else {
-            setParametros({ categoria: nuevaCategoria });
-        }
+        setCategoria(nuevaCategoria);
+        actualizarFiltros(nuevaCategoria, busqueda);
     }
 
     function cambiarBusqueda(evento) {
-        setBusqueda(evento.target.value);
+        const nuevaBusqueda = evento.target.value;
+        setBusqueda(nuevaBusqueda);
+        actualizarFiltros(categoria, nuevaBusqueda);
+    }
+
+    function limpiarFiltros() {
+        setCategoria("");
+        setBusqueda("");
+        setSearchParams({});
     }
 
     function verProducto(codigo) {
-        navigate(`/producto/${codigo}`);
+        navigate(`/producto/${encodeURIComponent(codigo)}`);
     }
 
     return (
         <Container className="py-4">
             <EncabezadoPagina
                 titulo="Catálogo de productos"
-                descripcion="Explora los productos disponibles en nuestra ferretería."
+                descripcion="Explora nuestro inventario con filtros por categoría y búsqueda por nombre, marca o código."
             />
 
-            <CampoInput
-                id="buscarProducto"
-                label="Buscar productos"
-                placeholder="Buscar por nombre o código"
-                value={busqueda}
-                onChange={cambiarBusqueda}
-            />
+            <section className="card mb-4 filtro-catalogo-card">
+                <div className="card-body">
+                    <Row className="g-3 align-items-end">
+                        <Col md={4}>
+                            <Selector
+                                id="categoriaCatalogo"
+                                className="mb-0"
+                                label="Categoría"
+                                placeholder="Todas las categorías"
+                                opciones={categorias}
+                                value={categoria}
+                                onChange={cambiarCategoria}
+                            />
+                        </Col>
 
-            <FiltroCategoria
-                categorias={categorias}
-                categoria={categoria}
-                onCambiarCategoria={cambiarCategoria}
-            />
+                        <Col md={6}>
+                            <Form.Group controlId="busquedaCatalogo">
+                                <Form.Label>Buscar producto</Form.Label>
+                                <Form.Control
+                                    type="search"
+                                    placeholder="Ej: cemento, taladro, cable o código"
+                                    value={busqueda}
+                                    onChange={cambiarBusqueda}
+                                />
+                            </Form.Group>
+                        </Col>
+
+                        <Col md={2}>
+                            <button type="button" className="btn btn-outline-secondary w-100" onClick={limpiarFiltros}>
+                                Limpiar
+                            </button>
+                        </Col>
+                    </Row>
+                </div>
+            </section>
+
+            <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-3">
+                <p className="mb-0 text-secondary">
+                    <strong>{productosFiltrados.length}</strong> producto(s) encontrado(s)
+                    {categoria ? ` en ${categoria}` : ""}.
+                </p>
+                {(categoria || busqueda) && (
+                    <p className="mb-0 small text-secondary">
+                        Filtros activos: {categoria || "todas las categorías"}
+                        {busqueda ? ` · “${busqueda}”` : ""}
+                    </p>
+                )}
+            </div>
 
             {productosFiltrados.length === 0 ? (
-                <p>No se encontraron productos con los filtros seleccionados.</p>
+                <div className="alert alert-light border">
+                    No se encontraron productos con los filtros seleccionados.
+                </div>
             ) : (
-                <CatalogoProductos
-                    productos={productosFiltrados}
-                    onVerProducto={verProducto}
-                />
+                <CatalogoProductos productos={productosFiltrados} onVerProducto={verProducto} />
             )}
         </Container>
     );

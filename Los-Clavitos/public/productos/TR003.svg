@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Tornillo volcanita 3.5x25mm caja 200 unid.">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#F0F5FB"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M298 115L343 138L302 220L390 308L362 337L265 244Z" fill="#6B8096" stroke="#64748B" stroke-width="7"/><path d="M342 135L390 84" stroke="#64748B" stroke-width="23" stroke-linecap="round"/><path d="M303 250L337 217M328 276L362 243M349 296L385 268" stroke="#FFF" stroke-width="8"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">TR003</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="417" font-size="24" fill="#243645" font-weight="700">Tornillo volcanita 3.5x25mm caja</text><text x="42" y="448" font-size="24" fill="#243645" font-weight="700">200 unid.</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Hilti · Imagen ilustrativa</text>
+    </svg>

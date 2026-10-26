@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Rastrillo 16 dientes con mango">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#E9F8ED"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M352 111V279" stroke="#9C7A54" stroke-width="26" stroke-linecap="round"/><path d="M278 275H430M297 275V333M328 275V333M360 275V333M392 275V333M423 275V333" stroke="#448F67" stroke-width="13" stroke-linecap="round"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">JA005</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Rastrillo 16 dientes con mango</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Corona · Imagen ilustrativa</text>
+    </svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Llave ajustable 10&quot;">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#ECF4FA"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M270 118Q326 116 349 167L315 202L340 232L375 198Q413 225 401 273Q390 318 348 314L306 357Q273 375 263 337L306 282Q269 254 282 221L236 174Z" fill="#627C92" stroke="#475569" stroke-width="7"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">HM005</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Llave ajustable 10&quot;</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Bahco · Imagen ilustrativa</text>
+    </svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Martillo carpintero 500g">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#ECF4FA"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M256 113H438V170H391L370 198H315V170H256Z" fill="#64748B" stroke="#334155" stroke-width="7"/><path d="M345 192L407 341L380 356L313 212Z" fill="#B67F4F" stroke="#8A5A31" stroke-width="6"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">HM001</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Martillo carpintero 500g</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Stanley · Imagen ilustrativa</text>
+    </svg>

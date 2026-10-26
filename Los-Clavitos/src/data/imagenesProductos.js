@@ -1,20 +1,103 @@
-// Fotografías referenciales por categoría. No corresponden necesariamente a la marca o modelo exacto.
-const IMAGENES_POR_CATEGORIA = {
-    "Mat. Construcción": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=75",
-    "Pinturas": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=75",
-    "Herramientas": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=75",
-    "Gasfitería": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=75",
-    "Electricidad": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=75",
-    "Tornillería": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=900&q=75",
-    "Madera": "https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=75",
-    "Seguridad": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=75",
-    "Jardín": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=75"
+// Fotografías referenciales online seleccionadas por familia de producto.
+// No son necesariamente del modelo o marca exactos del catálogo académico.
+// Si la imagen externa no carga, ImagenProducto usa la alternativa local.
+const FOTOS_REFERENCIA = {
+    "MC001": "https://carrilhoecosta.com/assets/cat-construcao-DMWzNivQ.jpg",
+    "MC002": "https://carrilhoecosta.com/assets/cat-construcao-DMWzNivQ.jpg",
+    "MC003": "https://carrilhoecosta.com/assets/cat-construcao-DMWzNivQ.jpg",
+    "MC004": "https://carrilhoecosta.com/assets/cat-construcao-DMWzNivQ.jpg",
+    "MC005": "https://www.acbconstructor.cl/web/image/product.template/5226/image_1024?unique=545331d",
+    "MC006": "https://promartecuador.vtexassets.com/arquivos/ids/206524/ripio-maqsa-40kg-titania-26709_01.jpg?v=638443138053900000",
+    "MC007": "https://carrilhoecosta.com/assets/cat-construcao-DMWzNivQ.jpg",
+    "MC008": "https://carrilhoecosta.com/assets/cat-construcao-DMWzNivQ.jpg",
+    "MC009": "https://carrilhoecosta.com/assets/cat-construcao-DMWzNivQ.jpg",
+    "MC010": "https://carrilhoecosta.com/assets/cat-construcao-DMWzNivQ.jpg",
+    "PT001": "https://http2.mlstatic.com/D_NQ_NP_803406-MLA99566908816_122025-O.webp",
+    "PT002": "https://http2.mlstatic.com/D_NQ_NP_803406-MLA99566908816_122025-O.webp",
+    "PT003": "https://http2.mlstatic.com/D_NQ_NP_803406-MLA99566908816_122025-O.webp",
+    "PT004": "https://images.co.soytul.com/59b64c99-de81-4f73-b313-2ffc10c2f22a",
+    "PT005": "https://images.co.soytul.com/59b64c99-de81-4f73-b313-2ffc10c2f22a",
+    "PT006": "https://http2.mlstatic.com/D_NQ_NP_803406-MLA99566908816_122025-O.webp",
+    "PT007": "https://http2.mlstatic.com/D_NQ_NP_803406-MLA99566908816_122025-O.webp",
+    "PT008": "https://http2.mlstatic.com/D_NQ_NP_803406-MLA99566908816_122025-O.webp",
+    "PT009": "https://http2.mlstatic.com/D_NQ_NP_803406-MLA99566908816_122025-O.webp",
+    "HM001": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HM002": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HM003": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HM004": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HM005": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HM006": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HM007": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HM008": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HM009": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HM010": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HE001": "https://media.falabella.com/sodimacCL/7306415_001/w%3D1200%2Ch%3D1200%2Cfit%3Dpad",
+    "HE002": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HE003": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HE004": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HE005": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "HE006": "https://http2.mlstatic.com/D_NQ_NP_769865-MLA74308751357_012024-W.webp",
+    "GS001": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS002": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS003": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS004": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS005": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS006": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS007": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS008": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS009": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS010": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS011": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "GS012": "https://www.ferreteriaproferre.com/images/cat-fontaneria.png",
+    "EL001": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL002": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL003": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL004": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL005": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL006": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL007": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL008": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL009": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL010": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL011": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL012": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "EL013": "https://minhhungtech.com/wp-content/uploads/2025/05/99a57edc-706e-4c12-9202-a922e475cfae.png",
+    "TR001": "https://media2.castorama.pl/is/image/CastoramaPL/wkr-ty-ciesielskie-lun-fix-z-bem-sze-ciok-tnym-din571mm-m8x50mm-50szt-~5903940686547_01c_MP?%24MOB_PREV%24=&%24height=600&%24width=600",
+    "TR002": "https://media2.castorama.pl/is/image/CastoramaPL/wkr-ty-ciesielskie-lun-fix-z-bem-sze-ciok-tnym-din571mm-m8x50mm-50szt-~5903940686547_01c_MP?%24MOB_PREV%24=&%24height=600&%24width=600",
+    "TR003": "https://media2.castorama.pl/is/image/CastoramaPL/wkr-ty-ciesielskie-lun-fix-z-bem-sze-ciok-tnym-din571mm-m8x50mm-50szt-~5903940686547_01c_MP?%24MOB_PREV%24=&%24height=600&%24width=600",
+    "TR004": "https://media2.castorama.pl/is/image/CastoramaPL/wkr-ty-ciesielskie-lun-fix-z-bem-sze-ciok-tnym-din571mm-m8x50mm-50szt-~5903940686547_01c_MP?%24MOB_PREV%24=&%24height=600&%24width=600",
+    "TR005": "https://media2.castorama.pl/is/image/CastoramaPL/wkr-ty-ciesielskie-lun-fix-z-bem-sze-ciok-tnym-din571mm-m8x50mm-50szt-~5903940686547_01c_MP?%24MOB_PREV%24=&%24height=600&%24width=600",
+    "TR006": "https://media2.castorama.pl/is/image/CastoramaPL/wkr-ty-ciesielskie-lun-fix-z-bem-sze-ciok-tnym-din571mm-m8x50mm-50szt-~5903940686547_01c_MP?%24MOB_PREV%24=&%24height=600&%24width=600",
+    "TR007": "https://media2.castorama.pl/is/image/CastoramaPL/wkr-ty-ciesielskie-lun-fix-z-bem-sze-ciok-tnym-din571mm-m8x50mm-50szt-~5903940686547_01c_MP?%24MOB_PREV%24=&%24height=600&%24width=600",
+    "TR008": "https://media2.castorama.pl/is/image/CastoramaPL/wkr-ty-ciesielskie-lun-fix-z-bem-sze-ciok-tnym-din571mm-m8x50mm-50szt-~5903940686547_01c_MP?%24MOB_PREV%24=&%24height=600&%24width=600",
+    "MD001": "https://www.bauhandwerk.de/imgs/100633109_6bda7a20fb.jpg",
+    "MD002": "https://www.bauhandwerk.de/imgs/100633109_6bda7a20fb.jpg",
+    "MD003": "https://www.bauhandwerk.de/imgs/100633109_6bda7a20fb.jpg",
+    "MD004": "https://www.bauhandwerk.de/imgs/100633109_6bda7a20fb.jpg",
+    "MD005": "https://www.bauhandwerk.de/imgs/100633109_6bda7a20fb.jpg",
+    "MD006": "https://www.bauhandwerk.de/imgs/100633109_6bda7a20fb.jpg",
+    "MD007": "https://www.bauhandwerk.de/imgs/100633109_6bda7a20fb.jpg",
+    "SE001": "https://www.zoro.com/static/cms/product/large/Z05CFvfo5oy.JPG",
+    "SE002": "https://www.zoro.com/static/cms/product/large/Z05CFvfo5oy.JPG",
+    "SE003": "https://www.zoro.com/static/cms/product/large/Z05CFvfo5oy.JPG",
+    "SE004": "https://www.zoro.com/static/cms/product/large/Z05CFvfo5oy.JPG",
+    "SE005": "https://www.zoro.com/static/cms/product/large/Z05CFvfo5oy.JPG",
+    "JA001": "https://http2.mlstatic.com/D_NQ_NP_898448-MLM75617205991_042024-O-combo-jardin-kit-jardin-manguera-herramientas-guante-pistola.webp",
+    "JA002": "https://http2.mlstatic.com/D_NQ_NP_898448-MLM75617205991_042024-O-combo-jardin-kit-jardin-manguera-herramientas-guante-pistola.webp",
+    "JA003": "https://http2.mlstatic.com/D_NQ_NP_898448-MLM75617205991_042024-O-combo-jardin-kit-jardin-manguera-herramientas-guante-pistola.webp",
+    "JA004": "https://http2.mlstatic.com/D_NQ_NP_898448-MLM75617205991_042024-O-combo-jardin-kit-jardin-manguera-herramientas-guante-pistola.webp",
+    "JA005": "https://http2.mlstatic.com/D_NQ_NP_898448-MLM75617205991_042024-O-combo-jardin-kit-jardin-manguera-herramientas-guante-pistola.webp"
 };
 
-export function imagenPorCategoria(categoria) {
-    return IMAGENES_POR_CATEGORIA[categoria] || "";
-}
-
 export function obtenerImagenProducto(producto) {
-    return producto?.imagen || imagenPorCategoria(producto?.categoria);
+    if (!producto) return "/producto-sin-imagen.svg";
+
+    const imagen = typeof producto.imagen === "string" ? producto.imagen.trim() : "";
+
+    // Una imagen personalizada del administrador tiene prioridad.
+    if (imagen && !imagen.startsWith("/productos/") && !imagen.includes("images.unsplash.com")) {
+        return imagen;
+    }
+
+    return FOTOS_REFERENCIA[producto.codigo] || imagen || "/producto-sin-imagen.svg";
 }

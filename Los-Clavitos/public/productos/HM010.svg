@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Cinta métrica 8m autoblocante">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#ECF4FA"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <rect x="258" y="119" width="190" height="211" rx="42" fill="#627C92" stroke="#475569" stroke-width="8"/><circle cx="351" cy="210" r="54" fill="#FFF" stroke="#64748B" stroke-width="6"/><path d="M337 179V242M360 179V242" stroke="#475569" stroke-width="5"/><path d="M449 258H555" stroke="#E9B44C" stroke-width="24"/><path d="M486 246V269M529 246V269" stroke="#475569" stroke-width="5"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">HM010</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Cinta métrica 8m autoblocante</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Stanley · Imagen ilustrativa</text>
+    </svg>

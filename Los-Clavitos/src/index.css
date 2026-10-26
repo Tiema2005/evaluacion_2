@@ -1,40 +1,312 @@
+:root {
+    --lm-primary: #0b4f8a;
+    --lm-primary-dark: #083a66;
+    --lm-accent: #e9ab38;
+    --lm-accent-soft: #fff4d9;
+    --lm-bg: #f5f7fa;
+    --lm-surface: #ffffff;
+    --lm-border: #e3e8ef;
+    --lm-text: #25313b;
+    --lm-muted: #64707d;
+    --lm-footer: #0f2237;
+}
+
 body {
     margin: 0;
     min-width: 320px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #25313b;
-    background-color: #fff;
+    color: var(--lm-text);
+    background-color: var(--lm-bg);
 }
 
-#root { min-height: 100vh; }
+#root {
+    min-height: 100vh;
+}
 
-/* Estas reglas se comparten en todas las páginas: un único diseño. */
-.app-main > .container { padding-top: 2.5rem !important; padding-bottom: 3rem !important; }
-.app-main h1 { font-size: clamp(1.8rem, 3vw, 2.35rem); font-weight: 700; letter-spacing: -.025em; }
-.app-main p { line-height: 1.6; }
-.encabezado-pagina { border-bottom: 1px solid #e8ebef; padding-bottom: 1.15rem; }
-.encabezado-pagina::after { content: ""; display: block; width: 48px; height: 3px; margin-top: 1rem; background: #e9ab38; border-radius: 2px; }
-.app-main .card { border: 1px solid #e5e9ee; border-radius: .65rem; box-shadow: 0 .2rem .75rem rgba(31,45,61,.055); overflow: hidden; }
-.app-main .card-body { padding: 1.5rem; }
-.app-main .card-title { font-weight: 700; }
-.app-main .table { vertical-align: middle; }
-.app-main .table th { background-color: #f7f8fa; color: #36424d; }
-.app-main .btn { font-weight: 600; }
-.app-main .form-label { font-weight: 600; }
-.app-main .text-secondary { color: #616c77 !important; }
+.app-main > .container {
+    padding-top: 2.5rem !important;
+    padding-bottom: 3rem !important;
+}
 
-/* Inicio: un destacado sobrio en lugar de una página vacía. */
-.inicio-destacado { background: #f6f8fa; border: 1px solid #e5e9ee; border-radius: .75rem; }
-.inicio-etiqueta { color: #966612; letter-spacing: .07em; font-size: .8rem; font-weight: 700; }
+.app-main h1 {
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
 
-/* Mantener el menú legible sin desbordar la pantalla. */
-.barra-principal .navbar-brand { font-weight: 700; font-size: 1.08rem; }
-.barra-principal .nav-link { white-space: nowrap; }
-.barra-principal .dropdown-item.active { background-color: #235da1; }
+.app-main p {
+    line-height: 1.6;
+}
 
-/* Imágenes del Blog: tamaños consistentes para ambas vistas. */
+.encabezado-pagina {
+    border-bottom: 1px solid var(--lm-border);
+    padding-bottom: 1.15rem;
+}
+
+.encabezado-pagina::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 1rem;
+    background: var(--lm-accent);
+    border-radius: 2px;
+}
+
+.app-main .card {
+    border: 1px solid var(--lm-border);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(31, 45, 61, 0.06);
+    overflow: hidden;
+    background-color: var(--lm-surface);
+}
+
+.app-main .card-body {
+    padding: 1.5rem;
+}
+
+.app-main .card-title {
+    font-weight: 700;
+}
+
+.app-main .table {
+    vertical-align: middle;
+}
+
+.app-main .table th {
+    background-color: #f7f8fa;
+    color: #36424d;
+}
+
+.app-main .btn {
+    font-weight: 600;
+    border-radius: 0.85rem;
+}
+
+.app-main .form-label {
+    font-weight: 600;
+}
+
+.app-main .text-secondary {
+    color: var(--lm-muted) !important;
+}
+
+.barra-superior {
+    background: var(--lm-primary-dark);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.barra-principal.navbar {
+    backdrop-filter: saturate(130%) blur(10px);
+}
+
+.barra-principal .navbar-brand {
+    font-weight: 700;
+    font-size: 1.12rem;
+    color: var(--lm-primary);
+}
+
+.barra-principal .navbar-brand small {
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.barra-principal .nav-link,
+.barra-principal .dropdown-toggle {
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--lm-text);
+}
+
+.barra-principal .dropdown-item.active,
+.barra-principal .dropdown-item:active {
+    background-color: var(--lm-primary);
+}
+
+/* Presentación sencilla en la página de inicio. */
+.inicio-presentacion {
+    padding: 1.8rem;
+    border-radius: 1rem;
+    background: #fff;
+    border: 1px solid var(--lm-border);
+}
+
+.categorias-acordeon .accordion-item {
+    border-color: var(--lm-border);
+}
+
+.categorias-acordeon .accordion-button {
+    padding: 1.2rem;
+}
+
+.inicio-etiqueta {
+    color: #8c6114;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.filtro-catalogo-card {
+    border-radius: 1.25rem;
+}
+
+.tarjeta-producto {
+    border-radius: 1.1rem;
+}
+
+.tarjeta-producto-imagen {
+    background: linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+}
+
+.tarjeta-producto-categoria {
+    display: inline-block;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #896014;
+    margin-bottom: 0.3rem;
+}
+
+.tarjeta-producto-codigo {
+    font-size: 0.84rem;
+    color: var(--lm-muted);
+}
+
+.tarjeta-producto-precio {
+    padding: 0.85rem 1rem;
+    border-radius: 0.95rem;
+    background: #f7fafc;
+    border: 1px solid var(--lm-border);
+}
+
+.detalle-producto-galeria,
+.detalle-producto-resumen {
+    border-radius: 1.35rem;
+}
+
+.detalle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+}
+
+.detalle-grid > div {
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--lm-border);
+    border-radius: 1rem;
+    background: var(--lm-bg);
+}
+
+.detalle-grid span {
+    display: block;
+    color: var(--lm-muted);
+    font-size: 0.86rem;
+    margin-bottom: 0.25rem;
+}
+
+.detalle-grid strong {
+    color: var(--lm-text);
+}
+
+.info-tienda-lista {
+    display: grid;
+    gap: 1rem;
+}
+
+.info-tienda-lista > div,
+.tarjeta-servicio-simple,
+.tarjeta-contacto-info {
+    border-radius: 1rem;
+}
+
+.info-tienda-lista > div {
+    padding: 1rem;
+    background: var(--lm-bg);
+    border: 1px solid var(--lm-border);
+}
+
+.info-tienda-lista span {
+    display: block;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--lm-muted);
+    margin-bottom: 0.35rem;
+}
+
+.tarjeta-servicio-simple .card-body {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+}
+
+.tarjeta-contacto-info {
+    height: 100%;
+}
+
+.login-layout {
+    border-radius: 1.4rem;
+}
+
+.login-panel-info {
+    background: linear-gradient(180deg, #0b4f8a 0%, #083a66 100%);
+}
+
+.resumen-carrito {
+    border-radius: 1.25rem;
+}
+
+.resumen-total {
+    background: #f7fafc;
+    border: 1px solid var(--lm-border);
+}
+
+.footer-tienda {
+    background: var(--lm-footer);
+    color: white;
+}
+
+.footer-etiqueta {
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.66);
+    font-weight: 700;
+}
+
+.footer-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-lista li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-lista-enlaces a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+
+.footer-lista-enlaces a:hover {
+    color: #fff;
+}
+
+.footer-inferior {
+    background: rgba(0, 0, 0, 0.18);
+    color: rgba(255, 255, 255, 0.72);
+}
+
 .imagen-articulo {
-    height: 220px;
+    height: 230px;
     object-fit: cover;
 }
 
@@ -43,9 +315,43 @@ body {
     object-fit: cover;
 }
 
-/* Fotografías del catálogo: mismo criterio visual en todas las pantallas. */
-.imagen-producto { display: block; width: 100%; object-fit: cover; background: #f1f3f5; }
-.imagen-producto-tarjeta { height: 190px; }
-.imagen-producto-detalle { height: 100%; min-height: 280px; max-height: 440px; }
-.imagen-producto-carrito { height: 110px; border-radius: .5rem; }
-@media (max-width: 991px) { .imagen-producto-detalle { height: 270px; min-height: 0; } }
+.imagen-producto {
+    display: flex;
+    width: 100%;
+    object-fit: contain;
+    background-color: #f1f5f9;
+}
+
+.imagen-producto-tarjeta {
+    height: 160px;
+}
+
+.imagen-producto-detalle {
+    height: 100%;
+    min-height: 340px;
+    max-height: none;
+}
+
+.imagen-producto-carrito {
+    height: 110px;
+    border-radius: 0.9rem;
+}
+
+@media (max-width: 991px) {
+    .imagen-producto-detalle {
+        height: 300px;
+        min-height: 0;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .detalle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-main > .container {
+        padding-top: 1.75rem !important;
+        padding-bottom: 2.25rem !important;
+    }
+}

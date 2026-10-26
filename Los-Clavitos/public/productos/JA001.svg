@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Manguera riego 3/4&quot; x 25m">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#E9F8ED"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <circle cx="353" cy="232" r="120" fill="none" stroke="#448F67" stroke-width="27"/><circle cx="353" cy="232" r="75" fill="none" stroke="#448F67" stroke-width="22"/><path d="M431 178Q500 104 536 141L562 171" fill="none" stroke="#4B5563" stroke-width="21" stroke-linecap="round"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">JA001</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Manguera riego 3/4&quot; x 25m</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Tigre · Imagen ilustrativa</text>
+    </svg>

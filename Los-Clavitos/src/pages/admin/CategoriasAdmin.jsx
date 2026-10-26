@@ -28,7 +28,7 @@ function CategoriasAdmin() {
     const [nombreNuevo, setNombreNuevo] = useState("");
     const [categoriaEditando, setCategoriaEditando] = useState(null);
     const [nombreEditado, setNombreEditado] = useState("");
-    const [revision, setRevision] = useState(0);
+    const [, setRevision] = useState(0);
 
     const [mensaje, setMensaje] = useState("");
     const [error, setError] = useState("");
@@ -36,8 +36,8 @@ function CategoriasAdmin() {
     useTituloPagina("Administración de categorías");
 
     const categorias = useMemo(
-        () => listarCategorias(productos),
-        [productos, revision]
+    () => listarCategorias(productos),
+    [productos]
     );
 
     function limpiarMensajes() {

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Codo PVC 1/2&quot; 90°">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#E8F9F9"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M196 179L472 126L523 167L244 225Z" fill="#3B97A4" stroke="#526E83" stroke-width="7"/><ellipse cx="244" cy="225" rx="55" ry="47" fill="#BFE9F0" stroke="#526E83" stroke-width="7"/><ellipse cx="244" cy="225" rx="29" ry="25" fill="#F8FAFC"/><path d="M244 275V342H462" stroke="#526E83" stroke-width="20" fill="none" stroke-linejoin="round"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">GS004</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Codo PVC 1/2&quot; 90°</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Tigre · Imagen ilustrativa</text>
+    </svg>

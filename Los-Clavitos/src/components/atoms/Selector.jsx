@@ -5,7 +5,7 @@ function Selector(props) {
     const opciones = props.opciones || [];
 
     return (
-        <Form.Group className="mb-3" controlId={props.id}>
+        <Form.Group className={props.className ?? "mb-3"} controlId={props.id}>
             <Form.Label>{props.label}</Form.Label>
 
             <Form.Select

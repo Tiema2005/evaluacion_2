@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Tablero eléctrico 4 espacios DIN">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#FFF9E4"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <rect x="259" y="110" width="193" height="226" rx="20" fill="#EDF2F6" stroke="#667A8C" stroke-width="7"/><rect x="299" y="165" width="112" height="113" rx="17" fill="#D3A243"/><circle cx="331" cy="216" r="12" fill="#FFF"/><circle cx="383" cy="216" r="12" fill="#FFF"/><rect x="343" y="243" width="27" height="12" rx="6" fill="#FFF"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">EL008</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Tablero eléctrico 4 espacios DIN</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Legrand · Imagen ilustrativa</text>
+    </svg>

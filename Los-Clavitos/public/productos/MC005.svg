@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Arena fina construcción 25 KG">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#FFF5E8"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M170 321Q230 225 285 240Q320 173 380 221Q419 185 480 268L542 321Z" fill="#C18D56" stroke="#967347" stroke-width="5"/><path d="M203 318Q320 257 478 317" stroke="#E6C59C" stroke-width="6" fill="none"/><circle cx="304" cy="249" r="6" fill="#F9E5C8"/><circle cx="387" cy="270" r="5" fill="#F9E5C8"/><circle cx="433" cy="307" r="6" fill="#F9E5C8"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">MC005</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Arena fina construcción 25 KG</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Granel · Imagen ilustrativa</text>
+    </svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Lijadora orbital 180W">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#ECF4FA"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M238 161Q234 133 267 126L429 126Q464 130 464 165V240H358L339 325H289L307 240H240Z" fill="#627C92" stroke="#475569" stroke-width="8"/><path d="M461 161H529L565 173V202L529 215H461Z" fill="#64748B" stroke="#475569" stroke-width="6"/><rect x="268" y="151" width="119" height="56" rx="10" fill="#FFF" opacity=".65"/><text x="325" y="184" text-anchor="middle" font-size="20" font-weight="700" fill="#475569">HERRAMIENTA</text><path d="M303 328L270 358" stroke="#475569" stroke-width="13"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">HE005</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Lijadora orbital 180W</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">Black+Decker · Imagen ilustrativa</text>
+    </svg>

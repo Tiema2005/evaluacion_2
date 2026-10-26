@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="Ilustración referencial: Antiparras de seguridad clear">
+    <rect width="700" height="520" fill="#FFFFFF"/>
+    <rect width="700" height="377" fill="#FFF9DD"/>
+    <circle cx="355" cy="208" r="145" fill="#FFFFFF" opacity=".55"/>
+    <path d="M174 189H244L265 208L283 190H425L446 209L469 189H532" fill="none" stroke="#475569" stroke-width="15"/><path d="M185 206Q195 298 277 296Q324 296 328 222M369 222Q373 296 421 296Q504 298 514 206" fill="#BFE3EF" stroke="#64748B" stroke-width="8"/>
+    <rect x="32" y="27" width="140" height="32" rx="16" fill="#FFFFFF" opacity=".88"/>
+    <text x="102" y="49" font-size="15" text-anchor="middle" font-weight="700" fill="#526473">SE003</text>
+    <rect y="377" width="700" height="143" fill="#FFFFFF"/>
+    <text x="42" y="428" font-size="24" fill="#243645" font-weight="700">Antiparras de seguridad clear</text>
+    <text x="42" y="494" font-size="15" fill="#7D8B96">3M · Imagen ilustrativa</text>
+    </svg>
